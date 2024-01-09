@@ -24,7 +24,7 @@
 
     <!-- </nav> -->
 
-    <?php include_once('includes/header.php');?>
+    <?php include_once('includes/header.php'); ?>
 
     <div id="layoutSidenav">
 
@@ -34,7 +34,7 @@
                     <img src="assets/img/construction.png" alt="No Img">
                 </div>
             </main>
-            <?php include_once('includes/footer.php');?>
+            <?php include_once('includes/footer.php'); ?>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">

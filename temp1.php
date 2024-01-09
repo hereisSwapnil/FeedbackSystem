@@ -24,12 +24,12 @@
 </head>
 
 <body>
-<?php
-$cars = array("Volvo", "BMW", "Toyota");
-$j = count($cars);
-// echo $j;
-//  echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
-?>
+	<?php
+	$cars = array("Volvo", "BMW", "Toyota");
+	$j = count($cars);
+	// echo $j;
+	//  echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+	?>
 	<div class="container">
 		<div class="no-box">
 			<span class="no"><?php echo $cars[0] ?></span>
@@ -47,7 +47,7 @@ $j = count($cars);
 	<script>
 		var no_box = document
 			.querySelector('.no-box');
-			
+
 		var i = 1;
 
 		function prev() {
@@ -58,12 +58,12 @@ $j = count($cars);
 				// Add disabled attribute on
 				// prev button
 				document.getElementsByClassName(
-						'prev').disabled = true;
+					'prev').disabled = true;
 
 				// Remove disabled attribute
 				// from next button
 				document.getElementsByClassName(
-						'next').disabled = false;
+					'next').disabled = false;
 			} else {
 				i--;
 				return setNo();
@@ -78,12 +78,12 @@ $j = count($cars);
 				// Add disabled attribute on
 				// next button
 				document.getElementsByClassName(
-						'next').disabled = true;
+					'next').disabled = true;
 
 				// Remove disabled attribute
 				// from prev button
 				document.getElementsByClassName(
-						'prev').disabled = false;
+					'prev').disabled = false;
 			} else {
 				i++;
 				return setNo();

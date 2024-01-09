@@ -105,7 +105,37 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                     <tbody>
                                         <?php
                                         $id1 = $_SESSION['facultyid'];
-                                        $sql1 = "SELECT subjectalloted.year, subjectalloted.semester, subjectalloted.section, subjectalloted.suballoted, subjects.subject, round((avg(sb1)+avg(sb2)+avg(sb3)+avg(sb4)+avg(sb5))/5,2) as sectionwise, round(avg(co1),2) as co1,round(avg(co2),2) as co2,round(avg(co3),2) as co3,round(avg(co4),2) as co4,round(avg(co5),2) as co5,round(avg(co6),2) as co6, users.section FROM faculty INNER JOIN subjectalloted ON subjectalloted.facultyemail=faculty.email INNER JOIN subjects ON subjects.subjectcode=subjectalloted.suballoted INNER JOIN respone ON respone.facultyemail=faculty.email INNER JOIN users ON respone.usersemail=users.email WHERE faculty.id=$id1 AND users.section=subjectalloted.section;";
+                                        $sql1 = "SELECT
+                                        subjectalloted.year,
+                                        subjectalloted.semester,
+                                        subjectalloted.section,
+                                        subjectalloted.suballoted,
+                                        subjects.subject,
+                                        ROUND((AVG(respone.sb1) + AVG(respone.sb2) + AVG(respone.sb3) + AVG(respone.sb4) + AVG(respone.sb5)) / 5, 2) as sectionwise,
+                                        ROUND(AVG(respone.co1), 2) as co1,
+                                        ROUND(AVG(respone.co2), 2) as co2,
+                                        ROUND(AVG(respone.co3), 2) as co3,
+                                        ROUND(AVG(respone.co4), 2) as co4,
+                                        ROUND(AVG(respone.co5), 2) as co5,
+                                        ROUND(AVG(respone.co6), 2) as co6,
+                                        users.section
+                                    FROM
+                                        faculty
+                                    INNER JOIN subjectalloted ON subjectalloted.facultyemail = faculty.email
+                                    INNER JOIN subjects ON subjects.subjectcode = subjectalloted.suballoted
+                                    INNER JOIN respone ON respone.facultyemail = faculty.email
+                                    INNER JOIN users ON respone.usersemail = users.email
+                                    WHERE
+                                        faculty.id = $id1
+                                        AND users.section = subjectalloted.section
+                                    GROUP BY
+                                        subjectalloted.year,
+                                        subjectalloted.semester,
+                                        subjectalloted.section,
+                                        subjectalloted.suballoted,
+                                        subjects.subject,
+                                        users.section;
+                                    ";
                                         // $ret=mysqli_query($con,"select * from faculty where id=$id1");
                                         $ret = mysqli_query($con, $sql1);
                                         $cnt = 1;

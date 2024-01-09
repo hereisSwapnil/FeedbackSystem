@@ -71,8 +71,10 @@ if (strlen($_SESSION['id'] == 0)) {
         $words = explode($delimiter, $section);
         global $fsection;
         $fsection = $words[0];
-        echo $fsection;
+        // echo "<script>console.log('$fsection');</script>";
+        // echo $fsection;
         $sql = mysqli_query($con, "select subject, subjectcode from subjects where semester= (select semester from users where id = $id1) and section_= '$fsection'");
+        // echo "<script>alert('$sql')</script>";
         $subjectArray = array();
         $subjectCodeArray = array();
         while ($result = mysqli_fetch_assoc($sql)) {
@@ -297,7 +299,7 @@ if (strlen($_SESSION['id'] == 0)) {
                                                 <input class="form-check-input" type="radio" name="co5" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
-                                            </td>
+                                        </td>
                                         <td id="opt_co5_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co5" id="inlineRadio2" value="2" />
@@ -580,16 +582,20 @@ if (strlen($_SESSION['id'] == 0)) {
                         // echo $sub;
                         // echo $subCode;
                         // echo $_COOKIE['index'];
-                        $sql1 = "select facultyemail from subjectalloted where suballoted = '$subCode2' and section = (select section from users where id= '$id1')";
+                        $sql1 = "SELECT facultyemail FROM subjectalloted WHERE suballoted = '$subCode2' AND section = (SELECT section FROM users WHERE id = '$id1')";
                         $result2 = mysqli_query($con, $sql1);
-                        $row1 = mysqli_fetch_assoc($result2);
-                        $facultyemail = $row1['facultyemail'];
-                        // $sql2 = "INSERT INTO respone (subject , usersemail,facultyemail) values ('$sub', '$usersemail', '$facultyemail')";
-                        // mysqli_query($con, $sql2);
-                        // mysqli_query($con,"UPDATE respone SET co1='$co1',co2='$co2',co3='$co3',co4='$co4',co5='$co5',co6='$co6',sb1='$sb1',sb2='$sb2',sb3='$sb3',sb4='$sb4',sb5='$sb5' where id= (select max(id) from respone)");
 
-                        $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6, sb1, sb2, sb3, sb4, sb5) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6', '$sb1', '$sb2', '$sb3', '$sb4', '$sb5')";
-                        mysqli_query($con, $sql);
+                        while ($row1 = mysqli_fetch_assoc($result2)) {
+                            $facultyemail = $row1['facultyemail'];
+
+                            // Log faculty email to the console
+                            echo "<script>console.log('Faculty Email:', '$facultyemail');</script>";
+
+                            $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6, sb1, sb2, sb3, sb4, sb5) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6', '$sb1', '$sb2', '$sb3', '$sb4', '$sb5')";
+                            mysqli_query($con, $sql);
+                        }
+                        // $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6, sb1, sb2, sb3, sb4, sb5) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6', '$sb1', '$sb2', '$sb3', '$sb4', '$sb5')";
+                        // mysqli_query($con, $sql);
 
                         $count = $_COOKIE['arraySize'];
                         if ($index == ($count)) {

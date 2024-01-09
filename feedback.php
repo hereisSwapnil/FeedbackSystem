@@ -223,19 +223,19 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>CO2</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_co2_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co2" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co2_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co2" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co2_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co2" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -246,19 +246,19 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>CO3</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_co3_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co3" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co3_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co3" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co3_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co3" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -269,19 +269,19 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>CO4</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_co4_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co4" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co4_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co4" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co4_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co4" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -292,19 +292,19 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>CO5</span>
                                         </th>
-                                        <th>
+                                        <td id="opt_co5_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co5" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                             </td>
-                                        <td>
+                                        <td id="opt_co5_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co5" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co5_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co5" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -315,19 +315,19 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>CO6</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_co6_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co6" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co6_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co6" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_co6_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="co6" id="inlineRadio1" value="1" />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -392,25 +392,25 @@ if (strlen($_SESSION['id'] == 0)) {
                                     </tr>
                                     <tr class="bg-light">
                                         <th><span>Adequate Assignments/Quiz/Tutorial Conducted</span></th>
-                                        <td>
+                                        <td id="opt_sb1_4">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb1" id="inlineRadio2" value="4" />
                                                 <label class="form-check-label" for="inlineRadio2">4</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb1_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb1" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb1_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb1" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb1_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb1" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -420,27 +420,27 @@ if (strlen($_SESSION['id'] == 0)) {
                                     </tr>
                                     <tr class="bg-light">
                                         <th><span>Class Room Discipline</span> </td>
-                                        <td>
+                                        <td id="opt_sb2_4">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb2" id="inlineRadio2" value="4" />
                                                 <label class="form-check-label" for="inlineRadio2">4</label>
                                             </div>
 
                                         </td>
-                                        <td>
+                                        <td id="opt_sb2_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb2" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
 
                                         </td>
-                                        <td>
+                                        <td id="opt_sb2_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb2" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb2_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb2" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -450,25 +450,25 @@ if (strlen($_SESSION['id'] == 0)) {
 
                                     <tr class="bg-light">
                                         <th><span>Organization of Lecture & Clarity of delivery</span></th>
-                                        <td>
+                                        <td id="opt_sb3_4">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb3" id="inlineRadio2" value="4" />
                                                 <label class="form-check-label" for="inlineRadio2">4</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb3_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb3" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb3_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb3" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb3_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb3" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -483,25 +483,25 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>Course Coverage</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_sb4_4">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb4" id="inlineRadio2" value="4" />
                                                 <label class="form-check-label" for="inlineRadio2">4</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb4_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb4" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb4_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb4" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb4_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb4" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>
@@ -513,25 +513,25 @@ if (strlen($_SESSION['id'] == 0)) {
                                         <th>
                                             <span>Course Delivery</span>
                                         </th>
-                                        <td>
+                                        <td id="opt_sb5_4">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb5" id="inlineRadio2" value="4" />
                                                 <label class="form-check-label" for="inlineRadio2">4</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb5_3">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb5" id="inlineRadio2" value="3" />
                                                 <label class="form-check-label" for="inlineRadio2">3</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb5_2">
                                             <div class="form-check  my-2 pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb5" id="inlineRadio2" value="2" />
                                                 <label class="form-check-label" for="inlineRadio2">2</label>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td id="opt_sb5_1">
                                             <div class="form-check my-2  pl-5 form-check-inline">
                                                 <input class="form-check-input" type="radio" name="sb5" id="inlineRadio1" value="1" required />
                                                 <label class="form-check-label" for="inlineRadio1">1</label>

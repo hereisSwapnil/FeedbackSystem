@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2024 at 09:42 AM
+-- Generation Time: Jan 05, 2024 at 09:57 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `firstyearnew`
+-- Database: `firstyear`
 --
 
 -- --------------------------------------------------------
@@ -67,6 +67,30 @@ CREATE TABLE `courseoutcomes` (
   `CO6` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `courseoutcomes`
+--
+
+INSERT INTO `courseoutcomes` (`sno`, `year`, `semester`, `subjectcode`, `subject`, `CO1`, `CO2`, `CO3`, `CO4`, `CO5`, `CO6`) VALUES
+(13, 1, 2, 'BAS101', 'Engineering Physics', 'Implement the particle nature of waves and wave nature of particles with reference to quantum mechanics.', 'Interpret the Electromagnetic Wave equations and examine parameters of wave propagation in different medium.', 'Relate physical optics with its application in optical devices.', 'Explain the principle and working of LASER and optical fibre and to examine their  industrial and                 scientific   applications . ', 'Explain superconductivity and nano materials with their industrial applications.', NULL),
+(14, 1, 2, 'BAS103', 'Engineering Mathematics I', 'Understand the concept of complex matrices, Eigen values, Eigen vectors and apply the concept of rank to                evaluate linear simultaneous equations', 'Remember the concept of differentiation to find successive differentiation, Leibnitz Theorem, and create               curve tracing, and find partial and total derivatives', 'Applying the concept of partial differentiation to evaluate extrema, series expansion, error approximation               of   functions and Jacobians.', 'Remember the concept of Beta and Gamma function; analyze area and volume and Dirichlet’s theorem in                multiple integral', 'Apply the concept of Vector Calculus to analyze and evaluate directional derivative, line, surface and              volume integrals.', NULL),
+(15, 1, 2, 'BEE101', 'Fundamentals of Electrical Engineering', 'Apply the concepts of KVL/KCL and network theorems in solving DC circuits.', 'Analyze the steady state behaviour of single phase and three phase AC  electrical     circuits.', 'Explain operative principle of single-phase transformer with the background of magnetic circuits.', 'Illustrate the working principles of induction motor, synchronous machine as  well as DC machine and                employ them in different area of applications.', 'Describe the components of low voltage electrical installations and perform    elementary calculations for                 energy   consumption.', NULL),
+(16, 1, 2, 'BME101', 'Fundamentals of Mechanical Engineering', 'Apply the concept of force resolution and stress and strain to solve basic problems', 'Illustrate the  construction details and working of internal combustion\n                         Engines, electric vehicle and hybrid vehicles.\n', 'Explain the construction detail and working of refrigerator, heat pump and air                         conditioner.', 'Explain fluid properties, conservation laws and hydraulic machinery used in real life.', 'Illustrate the working principle of different measuring instrument and\n                        Mechatronics with their advantages, scope and Industrial application.\n', NULL),
+(17, 1, 2, 'KAS105', 'Soft Skill I', 'Identify grammar techniques and utilize it in enhancing language development.', 'Recognize Communication skills to include definition, description and process explanation to               subsume the Listening and Speaking Skills.', 'Develop insight for the techniques of reading and writing and enable to write well structured              documents.', 'Demonstrate, in both formal and informal contexts, their ability for appropriate selection of topic             and materials', 'Apply the techniques of conversation for developing advanced level of comprehension  while             communicating in the  social/professional arena.  ', NULL),
+(18, 1, 2, 'BAS151', 'Engineering Physics Lab', 'Examine different parameters of semiconductors using four probes method.', 'Interpret black body radiation, electrochemical equivalent, variation o   magnetic field along a                   current carrying circular coil and specific resistance  measurement ', 'Implement the concept of Interference using Newton’s rings experiment,  Diffraction using       Grating and Polarization through determination of Optical   ', 'Relate Physical optics with nodal slide assembly and optical fibre setup.', NULL, NULL),
+(19, 1, 2, 'BAS155', 'English Language Lab', 'Apply the tenets of Group Dynamics to achieve effective Communication in Group activities.', 'Demonstration the preparation, experience and confidence gained in Mock-Interview.', 'Display their critical thinking skills.', 'Apply knowledge of Paralinguistics to perfect Voice Dynamics and make effective Oral                   Presentations.', 'Upgrade their Listening and Reading skills to be better Communicators and drive professional              growth and development.', NULL),
+(20, 1, 2, 'BEE151', 'Basic Electrical Engineering Lab', 'Conduct experiments illustrating the application of KVL/KCL and networktheorems to                DC electrical circuits.', 'Demonstrate the behavior of AC circuits connected to single phase AC supply and                  measure power in single phase as well as three phase electrical circuits.', 'Perform experiment illustrating BH curve of magnetic materials.', 'Calculate efficiency of a single-phase transformer.', 'Perform experiments on speed measurement and reversal of direction of threephase                  induction motor and identify the type of DC and AC machines based on their', NULL),
+(21, 1, 2, 'BCE151', 'Engineering Graphics & Design Lab', 'Develop and interpret orthographic projections of Points, Lines and Planes using first angle                           projection.', 'Develop and interpret orthographic projections of solids, sections of solids and lateral surfaces.', 'Make use of engineering drawing principle’s to convert orthogonal projections to isometric             projections.', 'Demonstrate the fundamental of engineering drawing using CAD software.', NULL, NULL),
+(22, 1, 2, 'BAS102', 'Engineering Chemistry', 'Categorize and treat the Wastewater and analyze the quality of Fuels based on their properties.', 'Apply the principles of Chemistry to interpret structure, bonding and properties of simple and advanced               Engineering materials.', 'Apply the fundamental concepts of Stereochemistry and Spectroscopic techniques for characterization of               Engineering Materials. ', 'Discuss the elementary concepts of Electrochemistry with special reference to Corrosion process of metals               and develop understanding of Chemistry of Engineering materials.', 'Outline the synthesis, properties and applications of Polymers and Organometallic compounds.', NULL),
+(23, 1, 2, 'BEC101', 'Fundamental Of Electronics Engineering', 'Comprehend PN junction diodes and apply its concept for different applications', 'Interpret construction and operation of BJT, FET and MOFET', 'Apply the concept of Operational amplifier to design linear and non-linear applications', 'Perform number systems, conversions, binary arithmetic and minimize logic functions', 'Acquire the knowledge of communication system and their applications', NULL),
+(24, 1, 2, 'BCS101', 'Programming For Problem Solving', 'Able to implement algorithms and draw flowcharts for solving Mathematical and                 Engineering problems.', 'Demonstrate an understanding of computer programming language concepts.', 'Ability to design and develop Computer programs, analyzes, and interprets the concept                of pointers, declarations, initialization, operations on pointers and their usage.', 'Able to define data types and use them in simple data processing applications he/she                must be able to use ', 'Develop confidence for self-education and ability for life-long learning needed for                Computer language.', NULL),
+(26, 1, 2, 'BAS152', 'Engineering Chemistry Lab', 'Analyze water samples for estimating hardness, alkalinity, chloride content and other                water    quality parameters by volumetric analysis.', 'Employ various physical and instrumental methods for quantitative and qualitative               analysis  of sample.', 'Acquire the skill for the preparation of engineering materials like polymers.', 'Discuss the elementary concepts of Electrochemistry with special reference to Corrosion process of metals               and develop understanding of Chemistry of Engineering materials.', 'Outline the synthesis, properties and applications of Polymers and Organometallic compounds.', NULL),
+(27, 1, 2, 'BCS151', 'Programming For Problem Solving Lab', 'To Develop Simple Algorithms for Arithmetic and Logical Problems.', 'To Translate the Algorithms to Programs & Execution (in C Language).', 'To Implement Conditional Branching, Iteration and Recursion.', 'To Decompose a Problem into Functions and Synthesize a Complete Program Using the               Divide and Conquer Approach.', 'To Use Arrays, Pointers and Structures to Develop Algorithms and Programs', NULL),
+(28, 1, 2, 'BEC151', 'Fundamental Of Electronics Engineering Lab', 'Discuss electronic components, equipments, and PCB preparation techniques.', 'Illustrate the complete process of PCB fabrication and the transformer winding.', 'Examine the characteristics and applications of two terninal (Diode) and three terminal               (BJT)  device.', 'Examine the basic applications of OP-AMP.', 'Varification of digital logic gates.', NULL),
+(29, 1, 2, 'BWS151', 'Workshop Practice Lab', 'Use various engineering materials, tools, machines and measuring equipments.', 'Apply the working principle and perform machining operations on lathe machine.', 'Perform manufacturing operations on components in fitting and carpentry shop.', 'Perform operations in welding, moulding, casting and gas cutting.', 'Demonstrate the features of CNC machine and 3D printing to fabricate model.', NULL),
+(30, 1, 2, 'BAS104', 'Environment and Ecology', 'Gain in-depth knowledge on natural processes that sustain life', 'Estimate and Predict the consequences of human actions on the web of life, global economy and               quality of human life.', 'Develop critical thinking for shaping strategies (scientific, social, economic and legal) for             environmental protection ', 'Acquire values and attitudes towards understanding complex environmental economic social             challenges, ', 'Adopt sustainability as a practice in life, society and industry.', NULL),
+(32, 1, 2, 'BAS103.', 'Engineering Mathematics I.', 'Understand the concept of complex matrices, Eigen values, Eigen vectors and apply the concept of rank to                evaluate linear simultaneous equations', 'Remember the concept of differentiation to find successive differentiation, Leibnitz Theorem, and create               curve tracing, and find partial and total derivatives', 'Applying the concept of partial differentiation to evaluate extrema, series expansion, error approximation               of   functions and Jacobians.', 'Remember the concept of Beta and Gamma function; analyze area and volume and Dirichlet’s theorem in                multiple integral', 'Apply the concept of Vector Calculus to analyze and evaluate directional derivative, line, surface and              volume integrals.', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -107,6 +131,96 @@ CREATE TABLE `faculty` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `faculty`
+--
+
+INSERT INTO `faculty` (`id`, `fname`, `lname`, `email`, `department`, `designation`, `mobile`, `dept`, `section`, `img`, `password`) VALUES
+(25, 'Dr. Richa', 'Verma', 'hodphysics@jssaten.ac.in', 'Physics', 'HOD', '9818387538', 'Department of Physics', 'A 1', 'richa.png', 'Test@12345'),
+(26, 'Dr. Bhupendra', 'Parashar', 'Parashar_b@jssaten.ac.in', 'Mathematics', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(27, 'Dr. Udit', 'Mittal', 'uditmittal.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(28, 'Dr. Neha', 'Saxena', 'nehadeepaksaxena@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(29, 'Ms. Piyali', 'Gope', 'Piyali.gope@jssaten.ac.in', 'English', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(30, 'Dr. Divya', 'Ghildyal', 'divyaghildyal@jssaten.ac.in', 'Physics', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(31, 'Dr. Nidhi', 'Yaduvanshi', 'nidhiyaduvanshi@jssaten.ac.in', 'Physics', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(32, 'Dr. Pratima', 'Rajpoot', 'pratimarajput@jssaten.ac.in', 'Physics', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(33, 'Dr. Deepa', 'Tyagi', 'deepatyagi@jssaten.ac.in', 'English', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(34, 'Dr. Manu', 'BS', 'manubs@jssaten.ac.in', 'English', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(35, 'Mr. Prashant', 'N', 'prashant27@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(36, 'Ms. Abhilasha', 'Pawar', 'abhilashapawar.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(37, 'Mr. Naveen', 'Murthy', 'naveenjmurthy@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', 'A 1', NULL, 'Test@12345'),
+(38, 'Dr. Anushri', 'Verma', 'anushriverma@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(39, 'Dr. Abhinav', 'Saxena', 'abhinav.saxena@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(40, 'Mr. Vikas Kumar', 'Singla', 'singla.1982@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(41, 'Dr. Nishi', 'Sharma', 'nishisharma@jssaten.ac.in', 'English', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(42, 'Mr. Rajesh', 'Kumar', 'rajeshkr.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(43, 'Dr. Abhishek Kumar', 'Singh', 'e.aksingh@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(44, 'Dr. Sanjiba', 'Bisoyi', 'sanjibabisoyi.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(45, 'Mr. Madan', 'Prasad', 'madanprasadcs@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(46, 'Dr. Manisha', 'Chaudhary', 'dr_manisha@jssaten.ac.in', 'Physics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(47, 'Dr. Shalini', 'Singh', 'shalinisingh@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(48, 'Mr. Veerendra', 'AN', 'anveerendrakumar@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(49, 'Dr. Ranu', 'Pandey', 'ranupandey@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(51, 'Dr. Gunjan', 'Varshney', 'gunjanvarshney.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(52, 'Dr. Pranava', 'Manjari', 'pranava@gmail.com', 'English', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(53, 'Ms. Priyanka', 'Singh', 'priyankasingh@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(54, 'Dr. Z. K.', 'Ansari', 'zkansari@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(55, 'Mr. Nirmal Kumar', 'Agarwal', 'nirmalkragarwal.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(56, 'Dr. Kalika', 'Singh', 'kalikasingh@jssaten.ac.in', 'English', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(57, 'Dr. Amit Kumar', 'Roy', 'amitroy.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(59, 'Dr. Nikunj', 'Agarwal', 'nikunjagarwal@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(60, 'Mr. Naveen Kumar', 'Bind', 'naveenbind.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(61, 'Ms. Divya', 'Chandra', 'divyachandra@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(62, 'Mr. Arun', 'Rawat', 'arunrawat@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(63, 'Mr. Subhash', 'Yadav', 'subhashyadav@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(64, 'Mr. Kapil Dev', 'Panchal', 'kapildev@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(65, 'Dr. Vineeta', 'Khemchandai', 'vineeta@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(66, 'Mr. Navin Kumar', 'Jha', 'navinjha@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(67, 'Ms. Sangeeta', 'Singh', 'sangeetasingh.eed@jssaten.ac.in', 'Electrical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(68, 'Mr. Mukesh', 'Yadav', 'mukeshyadav@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(69, 'Mr. Manu', 'G', 'manug@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(70, 'Dr. Neeraj', 'Verma', 'neerajverma@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(71, 'Dr. Kirti', 'Srivastava', 'kirtisrivastava@jssaten.ac.in', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(72, 'Dr. Amit Kumar', 'Ahuja', 'amitarana@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(73, 'Dr. Parul', 'Chaudhary', 'parul@gmailcom', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(74, 'Dr. Roli', 'Verma', 'roli@gmail.com', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(75, 'Dr. Nitima', 'Malsa', 'nitima@gmail.com', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(76, 'Dr. Rajshree', 'Srivastava', 'rajshree@jssaten.ac.in', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(79, 'Ms. Anjali', 'N', 'anjali@jssaten.ac.in', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(80, 'Dr. Pooja', 'Pandey', 'poojapandey@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(81, 'Dr. Chandra', 'Shankar', 'Chandrashekarams@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(82, 'Dr. Vishnu', 'Tiwari', 'vishnutiwari@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(83, 'Dr. Neelam', 'Khandelwal', 'neelam.khandelwal@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(84, 'Dr. Rudreshs', 'S', 'rudreshs@gmail.com', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(86, 'Dr. Navneet Kumar', 'Pandey', 'nkpandey@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(87, 'Dr. Leena', 'Biswas', 'leenab@jssaten.ac.in', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(88, 'Dr. Chaitra', 'N', 'chaithra@jssaten.ac.in', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(89, 'Dr. Bharat Bhushan', 'Sharma', 'bharatsharma@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(90, 'Dr. Ritesh Kumar', 'Jaiswal', 'riteshjaiswal@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(91, 'Dr. Manoj', 'Joshi', 'manojjoshi@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(92, 'Dr. Prema Shanka', 'Yadav', 'prema@gmail.com', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(94, 'Dr. Rajesh', 'Bajaj', 'rajeshbajaj@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(96, 'Dr. Usha', 'Rani', 'usharanin@jssaten.ac.in', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(97, 'Dr. Chhaya', 'Grover', 'chhaya@gmail.com', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(98, 'Dr. Mohit', 'Vishnoi', 'mohitvishnoi@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(99, 'Dr. Harshavardhan', 'M N', 'harshavardhana@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(100, 'Dr. Surekha', 'Bhangari', 'surekha@gmail.com', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(101, 'Dr. Prem Shankar', 'Yadav', 'premshankar@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(102, 'Dr. R. S.', 'Jagdish', 'jagadishrs@jssaten.ac.in', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(103, 'Dr. Rahul Kumar', 'Gupta', 'rahulkumargupta@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(104, 'Dr. Pawan Kumar', 'Kashyap', 'pawankashyap@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(105, 'Dr. Rajana', 'L', 'rajannal@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(106, 'Mr. Sampath Kumar', 'V', 'sampath.kumarjss@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(108, 'Mr. Ashima', 'Srivastava', 'ashimasrivastava@jssaten.ac.in', 'Chemistry', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(109, 'Mr. M', 'Nagraj', 'mallannanagaraj@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(112, 'Dr. Gayatri', 'Shakya', 'gayatri@gmail.com', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(113, 'Dr. Ruchi', 'Paliwal', 'ruchi@gmail.com', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(115, 'Dr. Arun Kumar', 'G', 'arunkumar@gmail.com', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(116, 'Mr. Rakesh', 'Kumar', 'rakesh.kumar@jssaten.ac.in', 'Electronics Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(117, 'Dr. Suvandan', 'Saraswat', 'suvandan.saraswat@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(118, 'Mr. Nitin Kumar', 'Chauhan', 'nitinchauhan@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(119, 'Dr. Gaurav', 'Jain', 'gauravjain@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345');
+
 -- --------------------------------------------------------
 
 --
@@ -127,6 +241,21 @@ CREATE TABLE `facultyresponse` (
   `co5` float DEFAULT NULL,
   `co6` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `facultyresponse`
+--
+
+INSERT INTO `facultyresponse` (`facultyemail`, `year`, `semester`, `suballoted`, `subject`, `sectionwise`, `co1`, `co2`, `co3`, `co4`, `co5`, `co6`) VALUES
+('chhaya@gmail.com', 1, 2, 'BEC101', 'Fundamental Of Electronics Engineering', 1, 1, 1, 1, 1, 1, 0),
+('nitima@gmail.com', 1, 2, 'BCS151', 'Programming For Problem Solving Lab', 1, 1, 1, 1, 1, 1, 0),
+('premshankar@jssaten.ac.in', 1, 2, 'BWS151', 'Workshop Practice Lab', 1, 1, 1, 1, 1, 1, 0),
+('jagadishrs@jssaten.ac.in', 1, 2, 'BAS102', 'Engineering Chemistry', 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 0),
+('jagadishrs@jssaten.ac.in', 1, 2, 'BAS152', 'Engineering Chemistry Lab', 1, 1, 1, 1, 1, 1, 0),
+('rahulkumargupta@jssaten.ac.in', 1, 2, 'BEC151', 'Fundamental Of Electronics Engineering Lab', 1, 1, 1, 1, 1, 1, 0),
+('rajshree@jssaten.ac.in', 1, 2, 'BCS101', 'Programming For Problem Solving', 1, 1, 1, 1, 1, 1, 0),
+('shalinisingh@jssaten.ac.in', 1, 2, 'BAS103.', 'Engineering Mathematics I.', 1, 1, 1, 1, 1, 1, 0),
+('suvandan.saraswat@jssaten.ac.in', 1, 2, 'BAS104', 'Environment and Ecology', 1, 1, 1, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -154,6 +283,31 @@ CREATE TABLE `respone` (
   `sb5` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `respone`
+--
+
+INSERT INTO `respone` (`id`, `usersemail`, `facultyemail`, `subjectcode`, `subject`, `co1`, `co2`, `co3`, `co4`, `co5`, `co6`, `co7`, `sb1`, `sb2`, `sb3`, `sb4`, `sb5`) VALUES
+(1325, 'yuvrajsingh1138@gmail.com', 'jagadishrs@jssaten.ac.in', 'BAS102', 'Engineering Chemistry', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1326, 'yuvrajsingh1138@gmail.com', 'chhaya@gmail.com', 'BEC101', 'Fundamental Of Electronics Engineering', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1327, 'yuvrajsingh1138@gmail.com', 'rajshree@jssaten.ac.in', 'BCS101', 'Programming For Problem Solving', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1328, 'yuvrajsingh1138@gmail.com', 'suvandan.saraswat@jssaten.ac.in', 'BAS104', 'Environment and Ecology', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1329, 'yuvrajsingh1138@gmail.com', 'jagadishrs@jssaten.ac.in', 'BAS152', 'Engineering Chemistry Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1330, 'yuvrajsingh1138@gmail.com', 'nitima@gmail.com', 'BCS151', 'Programming For Problem Solving Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1331, 'yuvrajsingh1138@gmail.com', 'rahulkumargupta@jssaten.ac.in', 'BEC151', 'Fundamental Of Electronics Engineering Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1332, 'yuvrajsingh1138@gmail.com', 'premshankar@jssaten.ac.in', 'BWS151', 'Workshop Practice Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1333, 'yuvrajsingh1138@gmail.com', 'shalinisingh@jssaten.ac.in', 'BAS103.', 'Engineering Mathematics I.', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1334, 'yuvrajsingh1138@gmail.com', 'jagadishrs@jssaten.ac.in', 'BAS102', 'Engineering Chemistry', 2, 2, 2, 2, 2, 0, NULL, 2, 2, 2, 2, 2),
+(1335, 'yuvrajsingh1138@gmail.com', 'chhaya@gmail.com', 'BEC101', 'Fundamental Of Electronics Engineering', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1336, 'yuvrajsingh1138@gmail.com', 'rajshree@jssaten.ac.in', 'BCS101', 'Programming For Problem Solving', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1337, 'yuvrajsingh1138@gmail.com', 'suvandan.saraswat@jssaten.ac.in', 'BAS104', 'Environment and Ecology', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1338, 'yuvrajsingh1138@gmail.com', 'jagadishrs@jssaten.ac.in', 'BAS152', 'Engineering Chemistry Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1339, 'yuvrajsingh1138@gmail.com', 'nitima@gmail.com', 'BCS151', 'Programming For Problem Solving Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1340, 'yuvrajsingh1138@gmail.com', 'rahulkumargupta@jssaten.ac.in', 'BEC151', 'Fundamental Of Electronics Engineering Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1341, 'yuvrajsingh1138@gmail.com', 'premshankar@jssaten.ac.in', 'BWS151', 'Workshop Practice Lab', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1342, 'yuvrajsingh1138@gmail.com', 'shalinisingh@jssaten.ac.in', 'BAS103.', 'Engineering Mathematics I.', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1),
+(1352, 'yuvrajsingh1138@gmail.com', 'jagadishrs@jssaten.ac.in', 'BAS102', 'Engineering Chemistry', 1, 1, 1, 1, 1, 0, NULL, 1, 1, 1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -169,6 +323,286 @@ CREATE TABLE `subjectalloted` (
   `suballoted` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `subjectalloted`
+--
+
+INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `section`, `suballoted`) VALUES
+(4, 'hodphysics@jssaten.ac.in', 1, 2, 'A 1', 'BAS101'),
+(5, 'Parashar_b@jssaten.ac.in', 1, 2, 'A 1', 'BAS103'),
+(6, 'uditmittal.eed@jssaten.ac.in', 1, 2, 'A 1', 'BEE101'),
+(7, 'nehadeepaksaxena@jssaten.ac.in', 1, 2, 'A 1', 'BME101'),
+(8, 'Piyali.gope@jssaten.ac.in', 1, 2, 'A 1', 'KAS105'),
+(9, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 1', 'BAS151'),
+(10, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 1', 'BAS151'),
+(11, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 1', 'BAS151'),
+(13, 'hodphysics@jssaten.ac.in', 1, 2, 'A 1', 'BAS151'),
+(14, 'Piyali.gope@jssaten.ac.in', 1, 2, 'A 1', 'BAS155'),
+(15, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 1', 'BAS155'),
+(16, 'manubs@jssaten.ac.in', 1, 2, 'A 1', 'BAS155'),
+(17, 'uditmittal.eed@jssaten.ac.in', 1, 2, 'A 1', 'BEE151'),
+(18, 'prashant27@jssaten.ac.in', 1, 2, 'A 1', 'BEE151'),
+(19, 'abhilashapawar.eed@jssaten.ac.in', 1, 2, 'A 1', 'BEE151'),
+(20, 'naveenjmurthy@jssaten.ac.in', 1, 2, 'A 1', 'BCE151'),
+(21, 'nehadeepaksaxena@jssaten.ac.in', 1, 2, 'A 1', 'BCE151'),
+(22, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 2', 'BAS101'),
+(23, 'anushriverma@jssaten.ac.in', 1, 2, 'A 2', 'BAS103'),
+(24, 'abhinav.saxena@jssaten.ac.in', 1, 2, 'A 2', 'BEE101'),
+(25, 'singla.1982@jssaten.ac.in', 1, 2, 'A 2', 'BME101'),
+(26, 'Piyali.gope@jssaten.ac.in', 1, 2, 'A 2', 'KAS105'),
+(27, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 2', 'BAS151'),
+(28, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 2', 'BAS151'),
+(29, 'nishisharma@jssaten.ac.in', 1, 2, 'A 2', 'BAS155'),
+(30, 'Piyali.gope@jssaten.ac.in', 1, 2, 'A 2', 'BAS155'),
+(31, 'manubs@jssaten.ac.in', 1, 2, 'A 2', 'BAS155'),
+(32, 'rajeshkr.eed@jssaten.ac.in', 1, 2, 'A 2', 'BEE151'),
+(33, 'e.aksingh@jssaten.ac.in', 1, 2, 'A 2', 'BEE151'),
+(34, 'abhinav.saxena@jssaten.ac.in', 1, 2, 'A 2', 'BEE151'),
+(35, 'sanjibabisoyi.eed@jssaten.ac.in', 1, 2, 'A 2', 'BEE151'),
+(36, 'madanprasadcs@jssaten.ac.in', 1, 2, 'A 2', 'BCE151'),
+(37, 'manug@jssaten.ac.in', 1, 2, 'A 2', 'BCE151'),
+(38, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 3', 'BAS101'),
+(39, 'shalinisingh@jssaten.ac.in', 1, 2, 'A 3', 'BAS103'),
+(40, 'rajeshkr.eed@jssaten.ac.in', 1, 2, 'A 3', 'BEE101'),
+(41, 'neerajverma@jssaten.ac.in', 1, 2, 'A 3', 'BME101'),
+(42, 'nishisharma@jssaten.ac.in', 1, 2, 'A 3', 'KAS105'),
+(43, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 3', 'BAS151'),
+(44, 'hodphysics@jssaten.ac.in', 1, 2, 'A 3', 'BAS151'),
+(45, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 3', 'BAS151'),
+(46, 'nishisharma@jssaten.ac.in', 1, 2, 'A 3', 'BAS155'),
+(47, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 3', 'BAS155'),
+(48, 'manubs@jssaten.ac.in', 1, 2, 'A 3', 'BAS155'),
+(49, 'sanjibabisoyi.eed@jssaten.ac.in', 1, 2, 'A 3', 'BEE151'),
+(50, 'prashant27@jssaten.ac.in', 1, 2, 'A 3', 'BEE151'),
+(51, 'abhinav.saxena@jssaten.ac.in', 1, 2, 'A 3', 'BEE151'),
+(52, 'anveerendrakumar@jssaten.ac.in', 1, 2, 'A 3', 'BCE151'),
+(53, 'manug@jssaten.ac.in', 1, 2, 'A 3', 'BCE151'),
+(54, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 4', 'BAS101'),
+(55, 'ranupandey@jssaten.ac.in', 1, 2, 'A 4', 'BAS103'),
+(56, 'gunjanvarshney.eed@jssaten.ac.in', 1, 2, 'A 4', 'BEE101'),
+(57, 'anveerendrakumar@jssaten.ac.in', 1, 2, 'A 4', 'BME101'),
+(58, 'pranava@gmail.com', 1, 2, 'A 4', 'KAS105'),
+(59, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 4', 'BAS151'),
+(60, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 4', 'BAS151'),
+(61, 'hodphysics@jssaten.ac.in', 1, 2, 'A 4', 'BAS151'),
+(62, 'nishisharma@jssaten.ac.in', 1, 2, 'A 4', 'BAS155'),
+(63, 'pranava@gmail.com', 1, 2, 'A 4', 'BAS155'),
+(64, 'Piyali.gope@jssaten.ac.in', 1, 2, 'A 4', 'BAS155'),
+(65, 'gunjanvarshney.eed@jssaten.ac.in', 1, 2, 'A 4', 'BEE151'),
+(66, 'abhilashapawar.eed@jssaten.ac.in', 1, 2, 'A 4', 'BEE151'),
+(67, 'prashant27@jssaten.ac.in', 1, 2, 'A 4', 'BEE151'),
+(68, 'anveerendrakumar@jssaten.ac.in', 1, 2, 'A 4', 'BCE151'),
+(69, 'priyankasingh@jssaten.ac.in', 1, 2, 'A 4', 'BCE151'),
+(70, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 5', 'BAS101'),
+(71, 'zkansari@jssaten.ac.in', 1, 2, 'A 5', 'BAS103'),
+(72, 'nirmalkragarwal.eed@jssaten.ac.in', 1, 2, 'A 5', 'BEE101'),
+(73, 'priyankasingh@jssaten.ac.in', 1, 2, 'A 5', 'BME101'),
+(74, 'pranava@gmail.com', 1, 2, 'A 5', 'KAS105'),
+(75, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 5', 'BAS151'),
+(76, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 5', 'BAS151'),
+(77, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 5', 'BAS151'),
+(78, 'pranava@gmail.com', 1, 2, 'A 5', 'BAS155'),
+(79, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 5', 'BAS155'),
+(80, 'kalikasingh@jssaten.ac.in', 1, 2, 'A 5', 'BAS155'),
+(81, 'nirmalkragarwal.eed@jssaten.ac.in', 1, 2, 'A 5', 'BEE151'),
+(82, 'amitroy.eed@jssaten.ac.in', 1, 2, 'A 5', 'BEE151'),
+(83, 'e.aksingh@jssaten.ac.in', 1, 2, 'A 5', 'BEE151'),
+(84, 'singla.1982@jssaten.ac.in', 1, 2, 'A 5', 'BCE151'),
+(85, 'priyankasingh@jssaten.ac.in', 1, 2, 'A 5', 'BCE151'),
+(86, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 6', 'BAS101'),
+(87, 'nikunjagarwal@jssaten.ac.in', 1, 2, 'A 6', 'BAS103'),
+(88, 'naveenbind.eed@jssaten.ac.in', 1, 2, 'A 6', 'BEE101'),
+(89, 'divyachandra@jssaten.ac.in', 1, 2, 'A 6', 'BME101'),
+(90, 'kalikasingh@jssaten.ac.in', 1, 2, 'A 6', 'KAS105'),
+(91, 'pratimarajput@jssaten.ac.in', 1, 2, 'A 6', 'BAS151'),
+(92, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 6', 'BAS151'),
+(93, 'hodphysics@jssaten.ac.in', 1, 2, 'A 6', 'BAS151'),
+(94, 'kalikasingh@jssaten.ac.in', 1, 2, 'A 6', 'BAS155'),
+(95, 'manubs@jssaten.ac.in', 1, 2, 'A 6', 'BAS155'),
+(96, 'naveenbind.eed@jssaten.ac.in', 1, 2, 'A 6', 'BEE151'),
+(97, 'arunrawat@jssaten.ac.in', 1, 2, 'A 6', 'BEE151'),
+(98, 'subhashyadav@jssaten.ac.in', 1, 2, 'A 6', 'BEE151'),
+(99, 'manug@jssaten.ac.in', 1, 2, 'A 6', 'BCE151'),
+(100, 'madanprasadcs@jssaten.ac.in', 1, 2, 'A 6', 'BCE151'),
+(101, 'madanprasadcs@jssaten.ac.in', 1, 2, 'A 6', 'BCE151'),
+(102, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 7', 'BAS101'),
+(103, 'nikunjagarwal@jssaten.ac.in', 1, 2, 'A 7', 'BAS103'),
+(104, 'arunrawat@jssaten.ac.in', 1, 2, 'A 7', 'BEE101'),
+(105, 'kapildev@jssaten.ac.in', 1, 2, 'A 7', 'BME101'),
+(106, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 7', 'KAS105'),
+(107, 'nidhiyaduvanshi@jssaten.ac.in', 1, 2, 'A 7', 'BAS151'),
+(108, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 7', 'BAS151'),
+(109, 'hodphysics@jssaten.ac.in', 1, 2, 'A 7', 'BAS151'),
+(110, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 7', 'BAS155'),
+(111, 'manubs@jssaten.ac.in', 1, 2, 'A 7', 'BAS155'),
+(112, 'arunrawat@jssaten.ac.in', 1, 2, 'A 7', 'BEE151'),
+(113, 'prashant27@jssaten.ac.in', 1, 2, 'A 7', 'BEE151'),
+(114, 'amitroy.eed@jssaten.ac.in', 1, 2, 'A 7', 'BEE151'),
+(115, 'manug@jssaten.ac.in', 1, 2, 'A 7', 'BCE151'),
+(116, 'madanprasadcs@jssaten.ac.in', 1, 2, 'A 7', 'BCE151'),
+(117, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 8', 'BAS101'),
+(118, 'vineeta@jssaten.ac.in', 1, 2, 'A 8', 'BAS103'),
+(119, 'abhilashapawar.eed@jssaten.ac.in', 1, 2, 'A 8', 'BEE101'),
+(120, 'navinjha@jssaten.ac.in', 1, 2, 'A 8', 'BME101'),
+(121, 'manubs@jssaten.ac.in', 1, 2, 'A 8', 'KAS105'),
+(122, 'divyaghildyal@jssaten.ac.in', 1, 2, 'A 8', 'BAS151'),
+(123, 'dr_manisha@jssaten.ac.in', 1, 2, 'A 8', 'BAS151'),
+(124, 'hodphysics@jssaten.ac.in', 1, 2, 'A 8', 'BAS151'),
+(125, 'deepatyagi@jssaten.ac.in', 1, 2, 'A 8', 'BAS155'),
+(126, 'kalikasingh@jssaten.ac.in', 1, 2, 'A 8', 'BAS155'),
+(127, 'manubs@jssaten.ac.in', 1, 2, 'A 8', 'BAS155'),
+(128, 'abhilashapawar.eed@jssaten.ac.in', 1, 2, 'A 8', 'BEE151'),
+(129, 'subhashyadav@jssaten.ac.in', 1, 2, 'A 8', 'BEE151'),
+(130, 'sangeetasingh.eed@jssaten.ac.in', 1, 2, 'A 8', 'BEE151'),
+(131, 'mukeshyadav@jssaten.ac.in', 1, 2, 'A 8', 'BCE151'),
+(132, 'nehadeepaksaxena@jssaten.ac.in', 1, 2, 'A 8', 'BCE151'),
+(133, 'priyankasingh@jssaten.ac.in', 1, 2, 'A 8', 'BCE151'),
+(134, 'kirtisrivastava@jssaten.ac.in', 1, 2, 'B 1', 'BAS102'),
+(135, 'zkansari@jssaten.ac.in', 1, 2, 'B 1', 'BAS103.'),
+(136, 'amitarana@jssaten.ac.in', 1, 2, 'B 1', 'BEC101'),
+(137, 'parul@gmailcom', 1, 2, 'B 1', 'BCS101'),
+(138, 'prashant27@jssaten.ac.in', 1, 2, 'B 1', 'BAS104'),
+(139, 'kirtisrivastava@jssaten.ac.in', 1, 2, 'B 1', 'BAS152'),
+(140, 'roli@gmail.com', 1, 2, 'B 1', 'BAS152'),
+(141, 'nitima@gmail.com', 1, 2, 'B 1', 'BCS151'),
+(142, 'parul@gmailcom', 1, 2, 'B 1', 'BCS151'),
+(143, 'rajshree@jssaten.ac.in', 1, 2, 'B 1', 'BCS151'),
+(144, 'anjali@jssaten.ac.in', 1, 2, 'B 1', 'BCS151'),
+(145, 'amitarana@jssaten.ac.in', 1, 2, 'B 1', 'BEC151'),
+(146, 'poojapandey@jssaten.ac.in', 1, 2, 'B 1', 'BEC151'),
+(147, 'Chandrashekarams@jssaten.ac.in', 1, 2, 'B 1', 'BEC151'),
+(148, 'vishnutiwari@jssaten.ac.in', 1, 2, 'B 1', 'BEC151'),
+(149, 'neelam.khandelwal@jssaten.ac.in', 1, 2, 'B 1', 'BEC151'),
+(150, 'rudreshs@gmail.com', 1, 2, 'B 1', 'BEC151'),
+(151, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 2', 'BAS102'),
+(152, 'Parashar_b@jssaten.ac.in', 1, 2, 'B 2', 'BAS103.'),
+(153, 'arunkumar@gmail.com', 1, 2, 'B 2', 'BEC101'),
+(154, 'nitima@gmail.com', 1, 2, 'B 2', 'BCS101'),
+(155, 'nkpandey@jssaten.ac.in', 1, 2, 'B 2', 'BAS104'),
+(156, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 2', 'BAS152'),
+(157, 'roli@gmail.com', 1, 2, 'B 2', 'BAS152'),
+(158, 'leenab@jssaten.ac.in', 1, 2, 'B 2', 'BAS152'),
+(159, 'nitima@gmail.com', 1, 2, 'B 2', 'BCS151'),
+(160, 'rajshree@jssaten.ac.in', 1, 2, 'B 2', 'BCS151'),
+(161, 'chaithra@jssaten.ac.in', 1, 2, 'B 2', 'BCS151'),
+(162, 'poojapandey@jssaten.ac.in', 1, 2, 'B 2', 'BEC151'),
+(163, 'bharatsharma@jssaten.ac.in', 1, 2, 'B 2', 'BEC151'),
+(164, 'riteshjaiswal@jssaten.ac.in', 1, 2, 'B 2', 'BEC151'),
+(165, 'manojjoshi@jssaten.ac.in', 1, 2, 'B 2', 'BEC151'),
+(166, 'prema@gmail.com', 1, 2, 'B 2', 'BWS151'),
+(167, 'rajeshbajaj@jssaten.ac.in', 1, 2, 'B 2', 'BWS151'),
+(168, 'rudreshs@gmail.com', 1, 2, 'B 2', 'BWS151'),
+(169, 'neelam.khandelwal@jssaten.ac.in', 1, 2, 'B 2', 'BWS151'),
+(170, 'usharanin@jssaten.ac.in', 1, 2, 'B 3', 'BAS102'),
+(171, 'vineeta@jssaten.ac.in', 1, 2, 'B 3', 'BAS103.'),
+(172, 'chhaya@gmail.com', 1, 2, 'B 3', 'BEC101'),
+(173, 'rajshree@jssaten.ac.in', 1, 2, 'B 3', 'BCS101'),
+(174, 'mohitvishnoi@jssaten.ac.in', 1, 2, 'B 3', 'BAS104'),
+(176, 'usharanin@jssaten.ac.in', 1, 2, 'B 3', 'BAS152'),
+(177, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 3', 'BAS152'),
+(178, 'leenab@jssaten.ac.in', 1, 2, 'B 3', 'BAS152'),
+(179, 'rajshree@jssaten.ac.in', 1, 2, 'B 3', 'BCS151'),
+(180, 'anjali@jssaten.ac.in', 1, 2, 'B 3', 'BCS151'),
+(181, 'Chandrashekarams@jssaten.ac.in', 1, 2, 'B 3', 'BEC151'),
+(182, 'rakesh.kumar@jssaten.ac.in', 1, 2, 'B 3', 'BEC151'),
+(184, 'harshavardhana@jssaten.ac.in', 1, 2, 'B 3', 'BEC151'),
+(185, 'surekha@gmail.com', 1, 2, 'B 3', 'BEC151'),
+(186, 'rudreshs@gmail.com', 1, 2, 'B 3', 'BWS151'),
+(187, 'navinjha@jssaten.ac.in', 1, 2, 'B 3', 'BWS151'),
+(188, 'premshankar@jssaten.ac.in', 1, 2, 'B 3', 'BWS151'),
+(189, 'jagadishrs@jssaten.ac.in', 1, 2, 'B 4', 'BAS102'),
+(190, 'shalinisingh@jssaten.ac.in', 1, 2, 'B 4', 'BAS103.'),
+(191, 'chhaya@gmail.com', 1, 2, 'B 4', 'BEC101'),
+(192, 'rajshree@jssaten.ac.in', 1, 2, 'B 4', 'BCS101'),
+(193, 'suvandan.saraswat@jssaten.ac.in', 1, 2, 'B 4', 'BAS104'),
+(194, 'jagadishrs@jssaten.ac.in', 1, 2, 'B 4', 'BAS152'),
+(195, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 4', 'BAS152'),
+(196, 'leenab@jssaten.ac.in', 1, 2, 'B 4', 'BAS152'),
+(197, 'nitima@gmail.com', 1, 2, 'B 4', 'BCS151'),
+(198, 'parul@gmailcom', 1, 2, 'B 4', 'BCS151'),
+(199, 'rajshree@jssaten.ac.in', 1, 2, 'B 4', 'BCS151'),
+(200, 'rahulkumargupta@jssaten.ac.in', 1, 2, 'B 4', 'BEC151'),
+(201, 'poojapandey@jssaten.ac.in', 1, 2, 'B 4', 'BEC151'),
+(202, 'harshavardhana@jssaten.ac.in', 1, 2, 'B 4', 'BEC151'),
+(203, 'premshankar@jssaten.ac.in', 1, 2, 'B 4', 'BWS151'),
+(204, 'neerajverma@jssaten.ac.in', 1, 2, 'B 4', 'BWS151'),
+(205, 'pawankashyap@jssaten.ac.in', 1, 2, 'B 4', 'BWS151'),
+(206, 'rajannal@jssaten.ac.in', 1, 2, 'B 4', 'BWS151'),
+(207, 'rudreshs@gmail.com', 1, 2, 'B 4', 'BWS151'),
+(208, 'kirtisrivastava@jssaten.ac.in', 1, 2, 'B 5', 'BAS102'),
+(209, 'anushriverma@jssaten.ac.in', 1, 2, 'B 5', 'BAS103.'),
+(210, 'sampath.kumarjss@jssaten.ac.in', 1, 2, 'B 5', 'BEC101'),
+(211, 'anjali@jssaten.ac.in', 1, 2, 'B 5', 'BCS101'),
+(212, 'mukeshyadav@jssaten.ac.in', 1, 2, 'B 5', 'BAS104'),
+(213, 'kirtisrivastava@jssaten.ac.in', 1, 2, 'B 5', 'BAS152'),
+(214, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 5', 'BAS152'),
+(215, 'leenab@jssaten.ac.in', 1, 2, 'B 5', 'BAS152'),
+(216, 'nitima@gmail.com', 1, 2, 'B 5', 'BCS151'),
+(217, 'parul@gmailcom', 1, 2, 'B 5', 'BCS151'),
+(218, 'anjali@jssaten.ac.in', 1, 2, 'B 5', 'BCS151'),
+(219, 'rahulkumargupta@jssaten.ac.in', 1, 2, 'B 5', 'BEC151'),
+(220, 'Chandrashekarams@jssaten.ac.in', 1, 2, 'B 5', 'BEC151'),
+(221, 'poojapandey@jssaten.ac.in', 1, 2, 'B 5', 'BEC151'),
+(222, 'premshankar@jssaten.ac.in', 1, 2, 'B 5', 'BWS151'),
+(223, 'mallannanagaraj@jssaten.ac.in', 1, 2, 'B 5', 'BWS151'),
+(224, 'rajeshbajaj@jssaten.ac.in', 1, 2, 'B 5', 'BWS151'),
+(225, 'rajannal@jssaten.ac.in', 1, 2, 'B 5', 'BWS151'),
+(226, 'roli@gmail.com', 1, 2, 'B 6', 'BAS102'),
+(227, 'vineeta@jssaten.ac.in', 1, 2, 'B 6', 'BAS103.'),
+(228, 'sangeetasingh.eed@jssaten.ac.in', 1, 2, 'B 6', 'BEC101'),
+(229, 'parul@gmailcom', 1, 2, 'B 6', 'BCS101'),
+(230, 'nitinchauhan@jssaten.ac.in', 1, 2, 'B 6', 'BAS104'),
+(231, 'roli@gmail.com', 1, 2, 'B 6', 'BAS152'),
+(232, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 6', 'BAS152'),
+(233, 'leenab@jssaten.ac.in', 1, 2, 'B 6', 'BAS152'),
+(234, 'nitima@gmail.com', 1, 2, 'B 6', 'BCS151'),
+(235, 'parul@gmailcom', 1, 2, 'B 6', 'BCS151'),
+(236, 'anjali@jssaten.ac.in', 1, 2, 'B 6', 'BCS151'),
+(237, 'manojjoshi@jssaten.ac.in', 1, 2, 'B 6', 'BEC151'),
+(238, 'amitarana@jssaten.ac.in', 1, 2, 'B 6', 'BEC151'),
+(239, 'rahulkumargupta@jssaten.ac.in', 1, 2, 'B 6', 'BEC151'),
+(240, 'rudreshs@gmail.com', 1, 2, 'B 6', 'BWS151'),
+(241, 'vishnutiwari@jssaten.ac.in', 1, 2, 'B 6', 'BWS151'),
+(242, 'leenab@jssaten.ac.in', 1, 2, 'B 7', 'BAS102'),
+(243, 'nikunjagarwal@jssaten.ac.in', 1, 2, 'B 7', 'BAS103.'),
+(244, 'gayatri@gmail.com', 1, 2, 'B 7', 'BEC101'),
+(245, 'nitima@gmail.com', 1, 2, 'B 7', 'BCS101'),
+(246, 'gauravjain@jssaten.ac.in', 1, 2, 'B 7', 'BAS104'),
+(247, 'ashimasrivastava@jssaten.ac.in', 1, 2, 'B 7', 'BAS152'),
+(248, 'usharanin@jssaten.ac.in', 1, 2, 'B 7', 'BAS152'),
+(249, 'leenab@jssaten.ac.in', 1, 2, 'B 7', 'BAS152'),
+(250, 'nitima@gmail.com', 1, 2, 'B 7', 'BCS151'),
+(251, 'rajshree@jssaten.ac.in', 1, 2, 'B 7', 'BCS151'),
+(252, 'chaithra@jssaten.ac.in', 1, 2, 'B 7', 'BCS151'),
+(253, 'amitarana@jssaten.ac.in', 1, 2, 'B 7', 'BEC151'),
+(254, 'manojjoshi@jssaten.ac.in', 1, 2, 'B 7', 'BEC151'),
+(255, 'poojapandey@jssaten.ac.in', 1, 2, 'B 7', 'BEC151'),
+(256, 'ruchi@gmail.com', 1, 2, 'B 7', 'BEC151'),
+(257, 'pawankashyap@jssaten.ac.in', 1, 2, 'B 7', 'BWS151'),
+(258, 'rudreshs@gmail.com', 1, 2, 'B 7', 'BWS151'),
+(259, 'neerajverma@jssaten.ac.in', 1, 2, 'B 7', 'BWS151'),
+(260, 'usharanin@jssaten.ac.in', 1, 2, 'B 8', 'BAS102'),
+(261, 'ranupandey@jssaten.ac.in', 1, 2, 'B 8', 'BAS103.'),
+(262, 'ruchi@gmail.com', 1, 2, 'B 8', 'BEC101'),
+(263, 'anjali@jssaten.ac.in', 1, 2, 'B 8', 'BCS101'),
+(264, 'pawankashyap@jssaten.ac.in', 1, 2, 'B 8', 'BAS104'),
+(265, 'jagadishrs@jssaten.ac.in', 1, 2, 'B 8', 'BAS152'),
+(266, 'usharanin@jssaten.ac.in', 1, 2, 'B 8', 'BAS152'),
+(267, 'leenab@jssaten.ac.in', 1, 2, 'B 8', 'BAS152'),
+(268, 'nitima@gmail.com', 1, 2, 'B 8', 'BCS151'),
+(269, 'parul@gmailcom', 1, 2, 'B 8', 'BCS151'),
+(270, 'anjali@jssaten.ac.in', 1, 2, 'B 8', 'BCS151'),
+(271, 'manojjoshi@jssaten.ac.in', 1, 2, 'B 8', 'BEC151'),
+(272, 'poojapandey@jssaten.ac.in', 1, 2, 'B 8', 'BEC151'),
+(273, 'ruchi@gmail.com', 1, 2, 'B 8', 'BEC151'),
+(274, 'pawankashyap@jssaten.ac.in', 1, 2, 'B 8', 'BWS151'),
+(275, 'neelam.khandelwal@jssaten.ac.in', 1, 2, 'B 8', 'BWS151'),
+(276, 'mallannanagaraj@jssaten.ac.in', 1, 2, 'B 8', 'BWS151'),
+(277, 'vishnutiwari@jssaten.ac.in', 1, 2, 'B 1', 'BWS151'),
+(278, 'neelam.khandelwal@jssaten.ac.in', 1, 2, 'B 1', 'BWS151'),
+(279, 'rudreshs@gmail.com', 1, 2, 'B 1', 'BWS151'),
+(280, 'mallannanagaraj@jssaten.ac.in', 1, 2, 'B 1', 'BWS151');
+
 -- --------------------------------------------------------
 
 --
@@ -183,6 +617,30 @@ CREATE TABLE `subjects` (
   `subjectcode` varchar(55) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `subject` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `subjects`
+--
+
+INSERT INTO `subjects` (`id`, `year`, `semester`, `section_`, `subjectcode`, `subject`) VALUES
+(14, 1, 2, 'A', 'BAS101', 'Engineering Physics'),
+(15, 1, 2, 'A', 'BAS103', 'Engineering Mathematics I'),
+(16, 1, 2, 'A', 'BEE101', 'Fundamentals of Electrical Engineering'),
+(17, 1, 2, 'A', 'BME101', 'Fundamentals of Mechanical Engineering'),
+(18, 1, 2, 'A', 'KAS105', 'Soft Skill I'),
+(19, 1, 2, 'A', 'BAS151', 'Engineering Physics Lab'),
+(20, 1, 2, 'A', 'BAS155', 'English Language Lab'),
+(21, 1, 2, 'A', 'BEE151', 'Basic Electrical Engineering Lab'),
+(22, 1, 2, 'A', 'BCE151', 'Engineering Graphics & Design Lab'),
+(23, 1, 2, 'B', 'BAS102', 'Engineering Chemistry'),
+(24, 1, 2, 'B', 'BEC101', 'Fundamental Of Electronics Engineering'),
+(25, 1, 2, 'B', 'BCS101', 'Programming For Problem Solving'),
+(26, 1, 2, 'B', 'BAS104', 'Environment and Ecology'),
+(27, 1, 2, 'B', 'BAS152', 'Engineering Chemistry Lab'),
+(28, 1, 2, 'B', 'BCS151', 'Programming For Problem Solving Lab'),
+(29, 1, 2, 'B', 'BEC151', 'Fundamental Of Electronics Engineering Lab'),
+(30, 1, 2, 'B', 'BWS151', 'Workshop Practice Lab'),
+(31, 1, 2, 'B', 'BAS103.', 'Engineering Mathematics I.');
 
 -- --------------------------------------------------------
 
@@ -357,7 +815,7 @@ INSERT INTO `users` (`id`, `year`, `semester`, `department`, `section`, `fname`,
 (205, 1, 2, 'Electrical And Electronics Engineering', 'B 7', 'Aditi', 'Upadhyaya', 'bsbaditi2003@gmail.com', '22EEE045', '22EEE045.', 'P@2003@p', '8840917349', NULL, '2023-03-02 06:32:48', 1, '23d43d141e4910783f120b961d16207a', 1),
 (206, 1, 2, 'Electrical And Electronics Engineering', 'B 7', 'Shreya ', 'Chaubey', 'skchaubey494@gmail.com', '22EEE046', '22EEE046.', 'Wtfidk.4', '8595823584', NULL, '2023-03-02 06:33:31', 1, '4e003e057500b842b198474c16609350', 1),
 (207, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'shraddhansh ', 'singh', '22csaiml016@jssaten.ac.in', '22AIML016', '22AIML016', '22Aiml016', '6306780311', NULL, '2023-03-02 06:34:03', 0, 'f059cf3c97a8c63eab1d67c602f3a9e9', 0),
-(208, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'Yuvraj ', 'Singh', 'yuvrajsingh1138@gmail.com', '22AIML006', '22AIML006', 'Yuvraj@1138', '8957586860', NULL, '2023-03-02 06:34:08', 1, '153979cd31209f89d1b47de920f6115e', 1),
+(208, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'Yuvraj ', 'Singh', 'yuvrajsingh1138@gmail.com', '22AIML006', '22AIML006', 'Yuvraj@1138', '8957586860', NULL, '2023-03-02 06:34:08', 0, '153979cd31209f89d1b47de920f6115e', 1),
 (209, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'aniket singh ', 'yadav', 'singhaniyadav1704@gmal.com', '22aiml017', '22aiml017', 'Aniket@1704', '8090298527', NULL, '2023-03-02 06:34:51', 0, '0fc05ed5470e4b0f5bf971548298a959', 0),
 (210, 1, 2, 'Electrical Engineering', 'B 6', 'Shriyansh', 'Pandey', 'artipandey342@gmail.com', '22EE013', '22EE013.', 'Pandey@0002', '8580612386', NULL, '2023-03-02 06:35:29', 0, 'a30cb0d683d33d083638df9ad7807261', 1),
 (211, 1, 0, 'Electrical And Electronics Engineering', 'B 7', 'aanya ', 'bahuguna', 'deepakbahuguna99@2004', '22EEE057', '22EEE057.', 'Music@2004', '9205702869', NULL, '2023-03-02 06:38:16', 0, 'd85931f12643a1d02e5c1e6ced406337', 0),
@@ -534,7 +992,7 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `respone`
 --
 ALTER TABLE `respone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1343;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1353;
 
 --
 -- AUTO_INCREMENT for table `subjectalloted`

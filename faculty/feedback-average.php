@@ -73,7 +73,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Section Wise<br>(Out Of 5)</th>
+                                            <th>Subject Feedback</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -93,7 +93,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Section Wise<br>(Out Of 5)</th>
+                                            <th>Subject Feedback</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -148,7 +148,12 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                                 <td><?php echo $row['year']; ?></td>
                                                 <td><?php echo $row['semester']; ?></td>
                                                 <td><?php echo $row['section']; ?></td>
-                                                <td><?php echo $row['suballoted']; ?></td>
+                                                <td>
+                                                    <?php
+                                                    $suballoted_display = explode(" ", $row['suballoted']);
+                                                    echo $suballoted_display[0];
+                                                    ?>
+                                                </td>
                                                 <td><?php echo $row['subject']; ?></td>
                                                 <td><?php echo $row['sectionwise']; ?></td>
                                                 <td><?php echo $row['co1']; ?></td>

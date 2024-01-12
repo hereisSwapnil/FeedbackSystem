@@ -113,7 +113,12 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                                 <td><?php echo $row['email']; ?></td>
                                                 <td><?php echo $row['year']; ?></td>
                                                 <td><?php echo $row['semester']; ?></td>
-                                                <td><?php echo $row['suballoted']; ?></td>
+                                                <td>
+                                                    <?php
+                                                    $suballoted_display = explode(" ", $row['suballoted']);
+                                                    echo $suballoted_display[0];
+                                                    ?>
+                                                </td>
                                                 <td><?php echo $row['subject']; ?></td>
                                                 <td><?php echo $row['sectionwise']; ?></td>
                                                 <td><?php echo $row['co1']; ?></td>

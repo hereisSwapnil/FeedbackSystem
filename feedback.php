@@ -42,8 +42,6 @@ if (strlen($_SESSION['id'] == 0)) {
                     location.reload();
                 }
                 let arraysize = document.cookie.charAt(document.cookie.indexOf("arraySize") + 10);
-                console.log(currentIndexValue);
-                console.log(arraysize);
                 if (currentIndexValue >= arraysize) {
                     window.location.replace("thankyou.php");
                 }
@@ -71,10 +69,8 @@ if (strlen($_SESSION['id'] == 0)) {
         $words = explode($delimiter, $section);
         global $fsection;
         $fsection = $words[0];
-        // echo "<script>console.log('$fsection');</script>";
-        // echo $fsection;
+
         $sql = mysqli_query($con, "select subject, subjectcode from subjects where semester= (select semester from users where id = $id1) and section_= '$fsection'");
-        // echo "<script>alert('$sql')</script>";
         $subjectArray = array();
         $subjectCodeArray = array();
         while ($result = mysqli_fetch_assoc($sql)) {
@@ -109,6 +105,10 @@ if (strlen($_SESSION['id'] == 0)) {
             <?php include_once('includes/sidebar.php'); ?>
             <div id="layoutSidenav_content">
                 <main>
+
+
+
+
                     <div class="m-5 mt-2 mb-0">
                         <?php
                         // extract($_POST);
@@ -124,6 +124,8 @@ if (strlen($_SESSION['id'] == 0)) {
                         $subCode = $dataCode[$index];
                         $sub1  = $sub;
                         $subCode1  = $subCode;
+                        $subparts = explode(" ", $subCode1);
+                        $subCode_display = $subparts[0];
                         $_POST['subject'] = $sub1;
                         $_POST['subjectcode'] = $subCode1;
                         // echo $sub;
@@ -137,7 +139,7 @@ if (strlen($_SESSION['id'] == 0)) {
                         // $subCode1  = $subjectCode;
                         // $_POST['subjectcode'] = $subCode1;
 
-                        echo "<strong>Subject Name : $sub ($subCode1)</strong><br>";
+                        echo "<strong>Subject Name : $sub ($subCode_display)</strong><br>";
                         //Count total Votes
                         $r = mysqli_query($con, "select * from courseoutcomes where subject='$sub'");
                         $c = mysqli_num_rows($r);
@@ -702,20 +704,43 @@ if (strlen($_SESSION['id'] == 0)) {
                 <?php include_once('includes/footer.php'); ?>
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var ids = [
+                    "opt_co1_3", "opt_co1_2", "opt_co1_1",
+                    "opt_co2_3", "opt_co2_2", "opt_co2_1",
+                    "opt_co3_3", "opt_co3_2", "opt_co3_1",
+                    "opt_co4_3", "opt_co4_2", "opt_co4_1",
+                    "opt_co5_3", "opt_co5_2", "opt_co5_1",
+                    "opt_co6_3", "opt_co6_2", "opt_co6_1",
+                    "opt_sb1_4", "opt_sb1_3", "opt_sb1_2", "opt_sb1_1",
+                    "opt_sb2_4", "opt_sb2_3", "opt_sb2_2", "opt_sb2_1",
+                    "opt_sb3_4", "opt_sb3_3", "opt_sb3_2", "opt_sb3_1",
+                    "opt_sb4_4", "opt_sb4_3", "opt_sb4_2", "opt_sb4_1",
+                    "opt_sb5_4", "opt_sb5_3", "opt_sb5_2", "opt_sb5_1"
+                ];
+
+                ids.forEach(function(id) {
+                    console.log(id);
+                    var element = document.getElementById(id);
+                    if (element) {
+                        element.addEventListener('click', function() {
+                            var radioInput = this.querySelector('input[type="radio"]');
+                            if (radioInput) {
+                                radioInput.click();
+                            }
+                            // alert(id);
+                        });
+                    }
+                });
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
         </script>
         <script src="../js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="../js/datatables-simple-demo.js"></script>
-        <script>
-            document.getElementById('opt_co1_3').addEventListener('click', function() {
-                var radioInput = this.querySelector('input[type="radio"]');
-                if (radioInput) {
-                    radioInput.click();
-                }
-            });
-        </script>
     </body>
 
     </html>

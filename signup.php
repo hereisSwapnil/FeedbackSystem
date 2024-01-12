@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
             // $fname = $row2['fname'];
             $subject = "Verify you Email";
             // $password=$row2['password'];
-            $message = "Please click The following link For verifying and activation of your account <div style='padding-top:10px;'><a href='http://localhost/fourth_year_feedback_system/email_verification.php?code=$activationcode'>Click Here</a></div>";
+            $message = "Please click The following link For verifying and activation of your account <div style='padding-top:10px;'><a href='http://localhost/feedbacksystem/email_verification.php?code=$activationcode'>Click Here</a></div>";
             $mail->isSMTP();                            // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2024 at 10:04 AM
+-- Generation Time: Jan 12, 2024 at 11:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fourthyear`
+-- Database: `feedbacksystem`
 --
 
 -- --------------------------------------------------------
@@ -59,13 +59,59 @@ CREATE TABLE `courseoutcomes` (
   `semester` int(11) DEFAULT NULL,
   `subjectcode` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `subject` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `CO1` varchar(200) DEFAULT NULL,
-  `CO2` varchar(200) DEFAULT NULL,
-  `CO3` varchar(200) DEFAULT NULL,
-  `CO4` varchar(200) DEFAULT NULL,
-  `CO5` varchar(200) DEFAULT NULL,
-  `CO6` varchar(200) DEFAULT NULL
+  `CO1` varchar(500) DEFAULT NULL,
+  `CO2` varchar(500) DEFAULT NULL,
+  `CO3` varchar(500) DEFAULT NULL,
+  `CO4` varchar(500) DEFAULT NULL,
+  `CO5` varchar(500) DEFAULT NULL,
+  `CO6` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `courseoutcomes`
+--
+
+INSERT INTO `courseoutcomes` (`sno`, `year`, `semester`, `subjectcode`, `subject`, `CO1`, `CO2`, `CO3`, `CO4`, `CO5`, `CO6`) VALUES
+(1, 4, 7, 'KHU-701 IT', 'Rural Development:Administration and Planning', 'Illustrate the definitions, concepts and components of Rural Development.', 'Outline various programs of rural development in pre-independence India.', 'Examine various aspects of Panchayati raj and rural administration in India.', 'Identify the need for and various elements of human resource development in rural sector.', 'Analyse the concept of rural industrialization and entrepreneurship in Indian context.', NULL),
+(2, 4, 7, 'KCS-076 IT', 'Software Testing', 'Describe software testing objectives, process, criteria, strategies and methods used in software engineering', 'Apply functional and structural testing techniques to generate test suit', 'Identify and apply various testing techniques for regression testing to generate test case', 'Apply various software testing activities, debugging approaches and testing tools', 'Identify the issues and challenges in object oriented testing and web testing.', NULL),
+(3, 4, 7, 'KCS-713 IT', 'Cloud Computing', 'Describe architecture and underlying principles of cloud computing.', 'Explain need, types and tools of Virtualization for cloud.', 'Describe Services Oriented Architecture and various types of cloud services.', 'Explain Inter cloud resources management cloud storage services and their providers Assess security services and standards for cloud computing.', 'Analyze advanced cloud technologies.', NULL),
+(4, 4, 7, 'KOE-074_ IT', 'Renewable Energy Resources', 'Classify and Compare various Non-conventional Energy resources.', 'Estimate the solar energy, its utilization and analyze the performance with its applications.', 'Explain the electrical conversion and applications of geothermal energy, Magneto-hydrodynamics and Fuel Cell.', 'Analyze the operational and performance characteristics of wind energy along with its applications.', 'Discuss the principle of bio mass, Ocean Thermal Energy Conversion, Tidal Wave, their characteristics, performance and limitations.', NULL),
+(5, 4, 7, 'KIT-751A IT', 'Software Testing Lab', 'Implement functional software testing for solving various problems using boundary value and equivalence class techniques.', 'Implement structural software testing for solving various problems using decision based and data flow techniques.', 'Design test cases for various testing techniques such as boundary value, equivalence class, decision based and data flow testing.', NULL, NULL, NULL),
+(6, 2, 3, 'BOE-304 IT', 'Energy Science & Engineering', 'Explain the fundamental concepts of various types of energy measurements, conversion and its applications.', 'Apply the concept of quantum physics for the generation of nuclear energy along with reactor design aspects and safety measures.', 'Apply the concepts and characteristics of Solar Energy and solar cell for various applications.', 'Make use of various conventional & non-conventional energy sources & its conversion into useful form.', 'Illustrate the global energy scenario along with various energy storage devices and conservation concepts.', NULL),
+(7, 2, 3, 'BAS-301 IT', 'Technical Communication', 'Understand the concepts of technical communication which will help them grow and emerge as better professionals.', 'Develop an understanding of tools necessary for writing effective required while drafting technical & professional documents.', 'Utilize technical writing skills necessary to demonstrate their ability to use organizational formats with a clear specific purpose, deliver effective speeches that are consistent with and appropriate for the audience and purpose.', 'Integrate various dimensions of communication skills which will further make the transition from student to a professional smoother and help them excel in their jobs.', 'Equip students with the technology-enabled communication tools and help them grow in various spheres of the professional arena.', NULL),
+(8, 2, 3, 'BCS-301 IT', 'Data Structure', 'Describe various sorting and searching algorithms and compute their efficiency.', 'Explain the concept of abstract data types and basic data organization schemes such as arrays and linked lists; and write algorithms for their operations and applications.', 'Describe operations and applications of stack & queues and implement it using array and linked list.', 'Describe properties of various types of trees and write algorithms for their operations.', 'Represent graphs using an array and linked list and write algorithms for graph traversal, minimum cost spanning trees and the shortest path.', NULL),
+(9, 2, 3, 'BCS-302 IT', 'Computer Organizaton and Architecture', 'Study of the basic structure and operation of a digital computer system.', 'Analysis of the design of arithmetic & logic unit and understanding of the fixed point and floating-point arithmetic operations.', 'Implementation of control unit techniques and the concept of Pipelining.', 'Understanding the hierarchical memory system, cache memories and virtual memory.', 'Understanding of the different ways of communicating with 1/0 devices and standard 1/0 interfaces.', NULL),
+(10, 2, 3, 'BCS-303 IT', 'Discrete Structures and Theory of Logic', 'Acquire Knowledge of sets and relations for solving the problems of POSET and lattices.', 'Apply fundamental concepts of functions and Boolean algebra for solving the problems of logical abilities.', 'Implement the rules of propositions and predicate logic to solve complex and logical problems.', 'Explore the concepts of group theory and their applications for solving advanced technological problems.', 'Apply the principles and concepts of graph theory and combinatorics for solving problems related to computer science.', NULL),
+(11, 2, 3, 'BCC-301 IT', 'Cyber Security', 'Understand the basic concepts of cyber security and cybercrimes.', 'Understand the security policies and cyber laws.', 'Understand the tools and methods used in cyber crime.', 'Understand the concepts of cyber forensics', 'Understand the cyber security policies and cyber laws', NULL),
+(12, 2, 3, 'BCS-351 IT', 'Data Structures Lab', 'Write and execute programs for searching and sorting arrays.', 'Write and execute programs for various operations (insert, delete, append and Concatenate etc.) on arrays and linked lists.', 'Write and execute programs for representing various data structures like Stacks, Queues and Trees using both arrays as well as linked lists.', 'Write and execute programs for using Binary Search Trees for searching for a key.', 'Write and execute programs for representation and traversal of graphs.', NULL),
+(13, 2, 3, 'BCS-352 IT', 'Computer Organization and Architecture Lab', 'Design and verify combinational circuits (adder, code converter, decoder, multiplexer) using basic gates.', 'Design and verify various flip-flops.', 'Design 1/0 system and ALU.', 'Demonstrate a simple instruction set computer.', NULL, NULL),
+(14, 2, 3, 'BCS-353 IT', 'Web Designing Workshop Lab', 'Design static web pages using HTML.', 'Create HTML web pages for the demonstration of web-based objects.', 'Demonstrate dynamic implementation of web pages using HTML, CSS, Bootstrap and Javascript.', NULL, NULL, NULL),
+(15, 2, 3, 'BVE-301 CSDS', 'Universal Human Values', 'Explain the need and basic content of fundamentals of Value Education.', 'Demonstrate harmony at various levels of human living.', 'Develop the ability to live in harmony with family and society for continuous happiness.', 'Build the appropriate relationship between nature and human life.', 'Apply the holistic approach of values and ethics in professional life.', NULL),
+(16, 2, 3, 'BAS-303 CSDS', 'Maths IV', 'Classify partial differential equations and transform into canonical form and solve linear and nonlinear partial differential equations of first order.', 'Apply the knowledge of partial differential equations to Engineering, sciences & technology.', 'Introduce measures of central tendency and various forecasting techniques.', 'Develop an understanding of the theory of probability, rules of probability and Probability distributions.', 'Understand the meaning and process of hypothesis testing including T-test, Z-test, Chi-Square test, Quality Control chart.', NULL),
+(17, 2, 3, 'BCS-301 CSDS', 'Data Structures', 'Describe various sorting and searching algorithms and compute their efficiency.', 'Explain the concept of abstract data types and basic data organization schemes such as arraysand linked lists; and write algorithms for their operations and applications.', 'Describe operations and applications of stack & queues and implement it using array and linked list', 'Describe properties of various types of trees and write algorithms for their operations.', 'Represent graphs using array and linked list and write algorithms for graph traversal,minimum cost spanning trees and shortest path.', NULL),
+(18, 2, 3, 'BCS-302 CSDS', 'Computer Organizaton and Architecture', 'Study of the basic structure and operation of a digital computer system.', 'Analysis of the design of arithmetic & logic unit and understanding of the fixed point and floating-point arithmetic operations.', 'Implementation of control unit techniques and the concept of Pipelining.', 'Understanding the hierarchical memory system, cache memories and virtual memory.', 'Understanding of the different ways of communicating with I/O devices and standard I/O interface', NULL),
+(19, 2, 3, 'BCS-303 CSDS', 'Discrete Structures and Theory of Logic', 'Acquire Knowledge of sets and relations for solving the problems of POSET and lattices.', 'Apply fundamental concepts of functions and Boolean algebra for solving the problems of logical abilities.', 'Implement the rules of propositions and predicate logic to solve the complex and logical problems.', 'Explore the concepts of group theory and their applications for solving the advance technological problems.', 'Apply the principles and concepts of graph theory and combinatorics for solving problems related to computer science.', NULL),
+(20, 2, 3, 'BCC-302 CSDS', 'Python Programming', 'Interpret the fundamental Python syntax and semantics and be fluent in the use of Python control flow statements.', 'Express proficiency in the handling of strings and functions', 'Determine the methods to create and manipulate Python programs by utilizing the data structures like lists, dictionaries, tuples and sets.', 'Identify the commonly used operations involving file systems and regular expressions.', 'Articulate the Object-Oriented Programming concepts such as encapsulation, inheritance and polymorphism as used in Python', NULL),
+(21, 2, 3, 'BCS-351 CSDS', 'Data Structures using C Lab', 'Write and execute programs for searching and sorting arrays.', 'Write and execute programs for various operations (insert, delete, append and Concatenate etc.) on arrays and linked lists.', 'Write and execute programs for representing various data structures like Stacks, Queues and Trees using both arrays as well as linked lists.', 'Write and execute programs for using Binary Search Trees for searching for a key.', 'Write and execute programs for representation and traversal of graphs.', NULL),
+(22, 2, 3, 'BCS-352 CSDS', 'Computer Organization Lab', 'Design and verify combinational circuits (adder, code converter, decoder, multiplexer) using basic gates.', 'Design and verify various flip-flops.', 'Design 1/0 system and ALU.', 'Demonstrate a simple instruction set computer.', NULL, NULL),
+(23, 2, 3, 'BCS-353 CSDS', 'Web Designing Workshop', 'Design static web pages using HTML.', 'Create HTML web pages for demonstration of web-based objects.', 'Demonstrate dynamic implementation of web pages using HTML, CSS, Bootstrap and Javascript', NULL, NULL, NULL),
+(24, 3, 5, 'KCS-501 IT', 'Database Management System', 'Describe the features of a database system and its application and compare various types of data models.', 'Construct an ER Model for a given problem and transform it into a relation database schema.', 'Formulate solution to a query problem using SQL Commands, relational algebra, tuple calculus and domain calculus.', 'Explain need of normalization and normalize a given relation to the desired normal form.', 'Explain different approaches of transaction processing and concurrency control.', NULL),
+(25, 3, 5, 'KIT-501 IT', 'Web Technology', 'Explain web development Strategies and Protocols governing Web.', 'Develop Java programs for window/web-based applications.', 'Design web pages using HTML, XML, CSS and JavaScript.', 'Creation of client-server environment using socket programming', 'Building enterprise level applications and manipulate web databases using JDBC', 'Design interactive web applications using Servlets and JSP'),
+(26, 3, 5, 'KCS-503 IT', 'Design and Analysis of Algorithm', 'Analyze algorithms by computing their efficiency using asymptotic analysis and prove the correctness of algorithms', 'Compare incremental and divide-and-conquer approaches of designing algorithms for problems such as sorting and searching.', 'Describe and analyze operations of various advance data structures such as Red Black Trees, Binomial, Fibonacci Heaps, B Trees, Tries and Skip Lists', 'Identify suitable design approaches like greedy, dynamic, backtracking or branch and bound and apply the same to solve a given optimization problem.', 'Explain different complexity classes P, NP and NP complete and use reduction to prove a problem to be NP Complete.', NULL),
+(27, 3, 5, 'KNC-502 IT', 'Object Oriented System Design', 'List the significance and key features of object-oriented programming and modeling using UML', 'Construct basic structural, behavioral and architectural model using object-oriented software engineering approach', 'Integrate object-oriented modeling techniques for the analysis and design of a system', 'Use the basic features of data abstraction and encapsulation in C++ programs', 'Use the advanced features such as inheritance, polymorphism and virtual function in C++', NULL),
+(28, 3, 5, 'KOE-074_ IT', 'Machine Learning Techniques', 'To understand the need for machine learning for various problem-solving', 'To understand a wide variety of learning algorithms and how to evaluate models generated from data', 'To understand the latest trends in machine learning', 'To design appropriate machine learning algorithms and apply the algorithms to real-world problems', 'To optimize the models learned and report on the expected accuracy that can be achieved by applying the models', NULL),
+(29, 3, 5, 'KCS-551 IT', 'Indian Tradition, Culture and Society', 'Illustrate the condition of society, state, and polity in ancient India.', 'Summarize the history of Indian Literature, Culture, tradition, and practices.', 'Compare the philosophy and practices of Indian religions.', 'Infer about basics of ancient science, management and Indian knowledge system', 'Explain the Cultural heritage and performing arts.', NULL),
+(30, 3, 5, 'KIT-551 IT', 'Database Management System Lab', 'Design and implement a database schema for a given problem', 'Write SQL commands to query a database', 'Write PL/SQL programs for implementing stored procedures, stored functions, cursors, trigger and packages.', NULL, NULL, NULL),
+(31, 3, 5, 'KCS-553 IT', 'Web Technology Lab', 'Design static web pages using HTML.', 'Create HTML web pages for demonstration of web-based objects.', 'Demonstrate dynamic implementation of web pages using HTML, CSS, XML, and JavaScript.', NULL, NULL, NULL),
+(32, 3, 5, 'KDS-551 IT', 'Design and Analysis of Algorithm Lab', 'Compute the time complexity of various algorithms in worst-case, average-case and best-case.', 'Implement programs for solving various problems using iterative, recursive, greedy, dynamic, branch and bound and backtracking approaches.', 'Implement graph algorithms to solve shortest-path problem and minimum spanning tree problem.', 'Implement programs using advanced data structures like RB Tree and B-Tree', NULL, NULL),
+(33, 3, 5, 'KCS-501 CSDS', 'Database Management System', 'Describe the features of a database system and its application and compare various types of data models.', 'Construct an ER Model for a given problem and transform it into a relation database schema.', 'Formulate a solution to a query problem using SQL Commands, relational algebra, tuple calculus and domain calculus.', 'Explain the need for normalization and normalize a given relation to the desired normal form.', 'Explain different approaches to transaction processing and concurrency control.', NULL),
+(34, 3, 5, 'KDS-501 CSDS', 'Introduction to Data Analytics and Visualization', 'Discuss various concepts of the data analytics pipeline.', 'Apply classification and regression techniques.', 'Explain and apply mining techniques on streaming data.', 'Compare different clustering and frequent pattern mining algorithms.', 'Describe the concept of R programming and implement analytics on Big data using R.', NULL),
+(35, 3, 5, 'KCS-503 CSDS', 'Design and Analysis of Algorithm', 'Analyze algorithms by computing their efficiency using asymptotic analysis and prove the correctness of algorithms.', 'Compare incremental and divide-and-conquer approaches of designing algorithms for problems such as sorting and searching.', 'Describe and analyze operations of various advanced data structures such as Red Black Trees, Binomial, Fibonacci Heaps, B Trees, Tries and Skip Lists.', 'Identify suitable design approaches like greedy, dynamic, backtracking or branch and bound and apply the same to solve a given optimization problem.', 'Explain different complexity classes P, NP and NP complete and use reduction to prove a problem to be NP Complete.', NULL),
+(36, 3, 5, 'KNC-501 CSDS', 'Constitution of India Law and Engineering', 'Identify and explore the basic features and modalities about the Indian constitution.', 'Differentiate and relate the functioning of the Indian parliamentary system at the center and state level.', 'Interpret various aspects of the Indian Legal System and its related bodies.', 'Apply different laws and regulations related to engineering practices.', 'Correlate the role of engineers with different organizations and governance models.', NULL),
+(37, 3, 5, 'KAI-051 CSDS', 'Mathematical Foundation AI, ML, Data Science', 'Understand and apply the probability distributions, random number generation and density estimations to perform the analysis of various kinds of data.', 'Perform statistical analysis on a variety of data.', 'Understand and manipulate data, design and perform simple Monte Carlo experiments, and be able to use resampling methods.', 'Understand and apply the concept of vector Space, Basis of Vector Space and Its Inner Product.', 'Apply the concept of Linear transformation and Eigen Vector to understand the transformation of Feature space.', NULL),
+(38, 3, 5, 'KCS-551 CSDS', 'Machine Learning Techniques', 'To understand the need for machine learning for various problem-solving.', 'To understand a wide variety of learning algorithms and how to evaluate models generated from data.', 'To understand the latest trends in machine learning.', 'To design appropriate machine learning algorithms and apply the algorithms to real-world problems.', 'To optimize the models learned and report on the expected accuracy that can be achieved by applying the models.', NULL),
+(39, 3, 5, 'KDS-551 CSDS', 'Data Analytics and Visualization Lab', 'Implement numerical and statistical analysis on various data sources.', 'Apply data preprocessing and dimensionality reduction methods on raw data.', 'Implement linear regression technique on numeric data for prediction.', 'Execute clustering and association rule mining algorithms on different datasets.', 'Implement and evaluate the performance of KNN algorithm on different.', NULL),
+(40, 3, 5, 'KCS-553 CSDS', 'Design and Analysis of Algorithm Lab', 'Compute the time complexity of various algorithms in worst-case, average-case and best-case.', 'Implement programs for solving various problems using iterative, recursive, greedy, dynamic, branch and bound and backtracking approaches.', 'Implement graph algorithms to solve the shortest-path problem and minimum spanning tree problem.', 'Implement programs using advanced data structures like RB Tree and B-Tree.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -107,6 +153,45 @@ CREATE TABLE `faculty` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `faculty`
+--
+
+INSERT INTO `faculty` (`id`, `fname`, `lname`, `email`, `department`, `designation`, `mobile`, `dept`, `section`, `img`, `password`) VALUES
+(1, 'Dr. Ruchi', 'Saraswat', 'rsaraswat@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(2, 'Mr. Sukhendra', 'Singh', 'sukhendrasingh@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(3, 'Dr. Megha', 'Jain', 'meghajain@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(4, 'Ms. Abhilasha', 'Pawar', 'abhilashapawar.eed@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(5, 'Ms. Pragya', 'Gupta', 'pragya.gupta@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(6, 'Mr. Pawan', 'Mishra', 'pawan.mishra@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(7, 'Ms. Vaishnavi', 'Bansal', 'vaishnavibansal@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(8, 'Dr. Dhiraj ', 'Pandey', 'dhirajpandey@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(9, 'Ms. Puneeta', 'Singh', 'puneeta.singh@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(10, 'Mr. Udit', 'Mittal', 'uditmittal.eed@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(11, 'Ms Shobha', 'G', 'shobha.g@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(12, 'Dr. Neha', 'Saxena', 'nehadeepaksaxena@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(13, 'Dr. Deepa', 'Tyagi', 'deepatyagi@jssaten.ac.in', 'English', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(14, 'Dr. Anushri', 'Verma', 'anushriverma@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(15, 'Mr. Vikas Kumar', 'Singla', 'singla.1982@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(16, 'Dr. Ranu', 'Pandey', 'ranupandey@jssaten.ac.in', 'Mathematics', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(17, 'Mr. Kapil Dev', 'Panchal', 'kapildev@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(18, 'Dr. Parul', 'Chaudhary', 'parul@gmail.com', 'Computer Science', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(19, 'Mr. M', 'Nagraj', 'mallannanagaraj@jssaten.ac.in', 'Mechanical Engineering', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(20, 'Dr. Gunjan', 'Ansari', 'gunjan@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(21, 'Dr. Meena', 'Arora', 'meena@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(22, 'Ms. Ujjwala', 'Thakur', 'ujjwala@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(23, 'Mr. Manoj', 'Kumar', 'manoj@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(24, 'Ms. Aparna', 'Srivastava', 'aparna@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(25, 'Ms. Prachi', 'Chhabra', 'prachi@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(26, 'Mr. Birendra', 'Verma', 'birendra@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(27, 'Ms. Charu', 'Awasthi', 'charu@gmail.com', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(28, 'Ms Anuradha', 'Singh', 'anuradha.singh@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(29, 'Ms. Shivani', 'Pathak', 'shivani.pathak@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(30, 'Ms. Geeta', 'Singh', 'geeta.singh@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(31, 'Mr. Mayank', 'Raj', 'mayank.raj@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(32, 'Ms. Vaishali', 'Tyagi', 'vaishali.tyagi@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345'),
+(33, 'Dr.Anju', 'Tripathi', 'anjutripathi.dms@jssaten.ac.in', '', NULL, NULL, '', NULL, NULL, 'Test@12345');
+
 -- --------------------------------------------------------
 
 --
@@ -128,6 +213,19 @@ CREATE TABLE `facultyresponse` (
   `co6` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `facultyresponse`
+--
+
+INSERT INTO `facultyresponse` (`facultyemail`, `year`, `semester`, `suballoted`, `subject`, `sectionwise`, `co1`, `co2`, `co3`, `co4`, `co5`, `co6`) VALUES
+('meghajain@jssaten.ac.in', 4, 7, 'KCS-713 IT', 'Cloud Computing', 4, 3, 3, 3, 3, 3, 0),
+('rsaraswat@jssaten.ac.in', 4, 7, 'KHU-701 IT', 'Rural Development:Administration and Planning', 4, 3, 3, 3, 3, 3, 0),
+('pawan.mishra@jssaten.ac.in', 4, 7, 'KIT-751A IT', 'Software Testing Lab', 4, 3, 3, 3, 3, 3, 0),
+('sukhendrasingh@jssaten.ac.in', 4, 7, 'KCS-076 IT', 'Software Testing', 4, 3, 3, 3, 3, 3, 0),
+('sukhendrasingh@jssaten.ac.in', 4, 7, 'KIT-751A IT', 'Software Testing Lab', 4, 3, 3, 3, 3, 3, 0),
+('abhilashapawar.eed@jssaten.ac.in', 4, 7, 'KOE-074 IT', 'Renewable Energy Resources', 4, 3, 3, 3, 3, 3, 0),
+('pragya.gupta@jssaten.ac.in', 4, 7, 'KIT-751A IT', 'Software Testing Lab', 4, 3, 3, 3, 3, 3, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -138,7 +236,7 @@ CREATE TABLE `respone` (
   `id` int(11) NOT NULL,
   `usersemail` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `facultyemail` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `subjectcode` varchar(55) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `subjectcode` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `subject` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
   `co1` int(11) DEFAULT NULL,
   `co2` int(11) DEFAULT NULL,
@@ -153,6 +251,19 @@ CREATE TABLE `respone` (
   `sb4` int(11) DEFAULT NULL,
   `sb5` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `respone`
+--
+
+INSERT INTO `respone` (`id`, `usersemail`, `facultyemail`, `subjectcode`, `subject`, `co1`, `co2`, `co3`, `co4`, `co5`, `co6`, `co7`, `sb1`, `sb2`, `sb3`, `sb4`, `sb5`) VALUES
+(1443, 'yashgupta0911@gmail.com', 'sukhendrasingh@jssaten.ac.in', 'KCS-076 IT', 'Software Testing', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1444, 'yashgupta0911@gmail.com', 'meghajain@jssaten.ac.in', 'KCS-713 IT', 'Cloud Computing', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1445, 'yashgupta0911@gmail.com', 'rsaraswat@jssaten.ac.in', 'KHU-701 IT', 'Rural Development:Administration and Planning', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1446, 'yashgupta0911@gmail.com', 'sukhendrasingh@jssaten.ac.in', 'KIT-751A IT', 'Software Testing Lab', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1447, 'yashgupta0911@gmail.com', 'pragya.gupta@jssaten.ac.in', 'KIT-751A IT', 'Software Testing Lab', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1448, 'yashgupta0911@gmail.com', 'pawan.mishra@jssaten.ac.in', 'KIT-751A IT', 'Software Testing Lab', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
+(1449, 'yashgupta0911@gmail.com', 'abhilashapawar.eed@jssaten.ac.in', 'KOE-074 IT', 'Renewable Energy Resources', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -169,6 +280,142 @@ CREATE TABLE `subjectalloted` (
   `suballoted` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `subjectalloted`
+--
+
+INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `section`, `suballoted`) VALUES
+(1, 'rsaraswat@jssaten.ac.in', 4, 7, 'IT 1', 'KHU-701 IT'),
+(2, 'sukhendrasingh@jssaten.ac.in', 4, 7, 'IT 1', 'KCS-076 IT'),
+(3, 'meghajain@jssaten.ac.in', 4, 7, 'IT 1', 'KCS-713 IT'),
+(4, 'abhilashapawar.eed@jssaten.ac.in', 4, 7, 'IT 1', 'KOE-074 IT'),
+(5, 'sukhendrasingh@jssaten.ac.in', 4, 7, 'IT 1', 'KIT-751A IT'),
+(6, 'pragya.gupta@jssaten.ac.in', 4, 7, 'IT 1', 'KIT-751A IT'),
+(7, 'pawan.mishra@jssaten.ac.in', 4, 7, 'IT 1', 'KIT-751A IT'),
+(8, 'vaishnavibansal@jssaten.ac.in', 4, 7, 'IT 2', 'KHU-701 IT'),
+(9, 'dhirajpandey@jssaten.ac.in', 4, 7, 'IT 2', 'KCS-076 IT'),
+(10, 'puneeta.singh@jssaten.ac.in', 4, 7, 'IT 2', 'KCS-713 IT'),
+(11, 'uditmittal.eed@jssaten.ac.in', 4, 7, 'IT 2', 'KOE-074 IT'),
+(12, 'puneeta.singh@jssaten.ac.in', 4, 7, 'IT 2', 'KIT-751A IT'),
+(13, 'shobha.g@jssaten.ac.in', 4, 7, 'IT 2', 'KIT-751A IT'),
+(14, 'dhirajpandey@jssaten.ac.in', 4, 7, 'IT 2', 'KIT-751A IT'),
+(15, 'singla.1982@jssaten.ac.in', 2, 3, 'IT 1', 'BOE-304 IT'),
+(16, 'deepatyagi@jssaten.ac.in', 2, 3, 'IT 1', 'BAS-301 IT'),
+(17, 'anuradha.singh@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-301 IT'),
+(18, 'meena@gmail.com', 2, 3, 'IT 1', 'BCS-302 IT'),
+(19, 'sukhendrasingh@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-303 IT'),
+(20, 'shobha.g@jssaten.ac.in', 2, 3, 'IT 1', 'BCC-301 IT'),
+(21, 'dhirajpandey@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-351 IT'),
+(22, 'meghajain@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-351 IT'),
+(23, 'anuradha.singh@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-351 IT'),
+(24, 'meena@gmail.com', 2, 3, 'IT 1', 'BCS-352 IT'),
+(25, 'shivani.pathak@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-352 IT'),
+(26, 'gunjan@gmail.com', 2, 3, 'IT 1', 'BCS-352 IT'),
+(27, 'sukhendrasingh@jssaten.ac.in', 2, 3, 'IT 1', 'BCS-353 IT'),
+(28, 'prachi@gmail.com', 2, 3, 'IT 1', 'BCS-353 IT'),
+(29, 'manoj@gmail.com', 2, 3, 'IT 1', 'BCS-353 IT'),
+(30, 'nehadeepaksaxena@jssaten.ac.in', 2, 3, 'IT 2', 'BOE-304 IT'),
+(31, 'deepatyagi@jssaten.ac.in', 2, 3, 'IT 2', 'BAS-301 IT'),
+(32, 'meghajain@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-301 IT'),
+(33, 'gunjan@gmail.com', 2, 3, 'IT 2', 'BCS-302 IT'),
+(34, 'prachi@gmail.com', 2, 3, 'IT 2', 'BCS-303 IT'),
+(35, 'pawan.mishra@jssaten.ac.in', 2, 3, 'IT 2', 'BCC-301 IT'),
+(36, 'meghajain@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-351 IT'),
+(37, 'geeta.singh@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-351 IT'),
+(38, 'anuradha.singh@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-351 IT'),
+(39, 'gunjan@gmail.com', 2, 3, 'IT 2', 'BCS-352 IT'),
+(40, 'shivani.pathak@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-352 IT'),
+(41, 'pragya.gupta@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-352 IT'),
+(42, 'prachi@gmail.com', 2, 3, 'IT 2', 'BCS-353 IT'),
+(43, 'manoj@gmail.com', 2, 3, 'IT 2', 'BCS-353 IT'),
+(44, 'mayank.raj@jssaten.ac.in', 2, 3, 'IT 2', 'BCS-353 IT'),
+(45, 'kapildev@jssaten.ac.in', 2, 3, 'IT 3', 'BOE-304 IT'),
+(46, 'deepatyagi@jssaten.ac.in', 2, 3, 'IT 3', 'BAS-301 IT'),
+(47, 'vaishali.tyagi@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-301 IT'),
+(48, 'gunjan@gmail.com', 2, 3, 'IT 3', 'BCS-302 IT'),
+(49, 'prachi@gmail.com', 2, 3, 'IT 3', 'BCS-303 IT'),
+(50, 'pawan.mishra@jssaten.ac.in', 2, 3, 'IT 3', 'BCC-301 IT'),
+(51, 'meghajain@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-351 IT'),
+(52, 'geeta.singh@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-351 IT'),
+(53, 'vaishali.tyagi@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-351 IT'),
+(54, 'charu@gmail.com', 2, 3, 'IT 3', 'BCS-352 IT'),
+(55, 'birendra@gmail.com', 2, 3, 'IT 3', 'BCS-352 IT'),
+(56, 'shivani.pathak@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-352 IT'),
+(57, 'prachi@gmail.com', 2, 3, 'IT 3', 'BCS-353 IT'),
+(58, 'manoj@gmail.com', 2, 3, 'IT 3', 'BCS-353 IT'),
+(59, 'mayank.raj@jssaten.ac.in', 2, 3, 'IT 3', 'BCS-353 IT'),
+(60, 'mallannanagaraj@jssaten.ac.in', 2, 3, 'CSDS 1', 'BVE-301 CSDS'),
+(61, 'anushriverma@jssaten.ac.in', 2, 3, 'CSDS 1', 'BAS-303 CSDS'),
+(62, 'aparna@gmail.com', 2, 3, 'CSDS 1', 'BCS-301 CSDS'),
+(63, 'pragya.gupta@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCS-302 CSDS'),
+(64, 'manoj@gmail.com', 2, 3, 'CSDS 1', 'BCS-303 CSDS'),
+(65, 'mayank.raj@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCC-302 CSDS'),
+(66, 'aparna@gmail.com', 2, 3, 'CSDS 1', 'BCS-351 CSDS'),
+(67, 'geeta.singh@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCS-351 CSDS'),
+(68, 'pragya.gupta@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCS-352 CSDS'),
+(69, 'charu@gmail.com', 2, 3, 'CSDS 1', 'BCS-352 CSDS'),
+(70, 'birendra@gmail.com', 2, 3, 'CSDS 1', 'BCS-352 CSDS'),
+(71, 'manoj@gmail.com', 2, 3, 'CSDS 1', 'BCS-353 CSDS'),
+(72, 'sukhendrasingh@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCS-353 CSDS'),
+(73, 'pawan.mishra@jssaten.ac.in', 2, 3, 'CSDS 1', 'BCS-353 CSDS'),
+(74, 'mallannanagaraj@jssaten.ac.in', 2, 3, 'CSDS 2', 'BVE-301 CSDS'),
+(75, 'ranupandey@jssaten.ac.in', 2, 3, 'CSDS 2', 'BAS-303 CSDS'),
+(76, 'geeta.singh@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-301 CSDS'),
+(77, 'shivani.pathak@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-302 CSDS'),
+(78, 'manoj@gmail.com', 2, 3, 'CSDS 2', 'BCS-303 CSDS'),
+(79, 'mayank.raj@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCC-302 CSDS'),
+(80, 'geeta.singh@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-351 CSDS'),
+(81, 'vaishali.tyagi@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-351 CSDS'),
+(82, 'anuradha.singh@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-351 CSDS'),
+(83, 'shivani.pathak@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-352 CSDS'),
+(84, 'pragya.gupta@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-352 CSDS'),
+(85, 'manoj@gmail.com', 2, 3, 'CSDS 2', 'BCS-352 CSDS'),
+(86, 'manoj@gmail.com', 2, 3, 'CSDS 2', 'BCS-353 CSDS'),
+(87, 'sukhendrasingh@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-353 CSDS'),
+(88, 'pawan.mishra@jssaten.ac.in', 2, 3, 'CSDS 2', 'BCS-353 CSDS'),
+(89, 'meena@gmail.com', 3, 5, 'IT 1', 'KCS-501 IT'),
+(90, 'ujjwala@gmail.com', 3, 5, 'IT 1', 'KIT-501 IT'),
+(91, 'parul@gmail.com', 3, 5, 'IT 1', 'KCS-503 IT'),
+(92, 'vaishali.tyagi@jssaten.ac.in', 3, 5, 'IT 1', 'KNC-502 IT'),
+(93, 'geeta.singh@jssaten.ac.in', 3, 5, 'IT 1', 'KOE-074_ IT'),
+(94, 'birendra@gmail.com', 3, 5, 'IT 1', 'KCS-055 IT'),
+(95, 'charu@gmail.com', 3, 5, 'IT 1', 'KCS-551 IT'),
+(96, 'birendra@gmail.com', 3, 5, 'IT 1', 'KCS-551 IT'),
+(97, 'meena@gmail.com', 3, 5, 'IT 1', 'KCS-551 IT'),
+(98, 'shobha.g@jssaten.ac.in', 3, 5, 'IT 1', 'KCS-551 IT'),
+(99, 'ujjwala@gmail.com', 3, 5, 'IT 1', 'KIT-551 IT'),
+(100, 'mayank.raj@jssaten.ac.in', 3, 5, 'IT 1', 'KIT-551 IT'),
+(101, 'parul@gmail.com', 3, 5, 'IT 1', 'KCS-553 IT'),
+(102, 'vaishali.tyagi@jssaten.ac.in', 3, 5, 'IT 1', 'KCS-553 IT'),
+(103, 'puneeta.singh@jssaten.ac.in', 3, 5, 'IT 1', 'KCS-553 IT'),
+(104, 'birendra@gmail.com', 3, 5, 'IT 2', 'KCS-501 IT'),
+(105, 'ujjwala@gmail.com', 3, 5, 'IT 2', 'KIT-501 IT'),
+(106, 'parul@gmail.com', 3, 5, 'IT 2', 'KCS-503 IT'),
+(107, 'vaishali.tyagi@jssaten.ac.in', 3, 5, 'IT 2', 'KNC-502 IT'),
+(108, 'shivani.pathak@jssaten.ac.in', 3, 5, 'IT 2', 'KOE-074_ IT'),
+(109, 'charu@gmail.com', 3, 5, 'IT 2', 'KCS-055 IT'),
+(110, 'birendra@gmail.com', 3, 5, 'IT 2', 'KCS-551 IT'),
+(111, 'shobha.g@jssaten.ac.in', 3, 5, 'IT 2', 'KCS-551 IT'),
+(112, 'ujjwala@gmail.com', 3, 5, 'IT 2', 'KIT-551 IT'),
+(113, 'mayank.raj@jssaten.ac.in', 3, 5, 'IT 2', 'KIT-551 IT'),
+(115, 'parul@gmail.com', 3, 5, 'IT 2', 'KCS-553 IT'),
+(116, 'vaishali.tyagi@jssaten.ac.in', 3, 5, 'IT 2', 'KCS-553 IT'),
+(117, 'anuradha.singh@jssaten.ac.in', 3, 5, 'IT 2', 'KCS-553 IT'),
+(118, 'charu@gmail.com', 3, 5, 'CSDS', 'KCS-501 CSDS'),
+(119, 'aparna@gmail.com', 3, 5, 'CSDS', 'KDS-501 CSDS'),
+(120, 'puneeta.singh@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-503 CSDS'),
+(121, 'anjutripathi.dms@jssaten.ac.in', 3, 5, 'CSDS', 'KNC-501 CSDS'),
+(122, 'manoj@gmail.com', 3, 5, 'CSDS', 'KAI-051 CSDS'),
+(123, 'pragya.gupta@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-055 CSDS'),
+(124, 'charu@gmail.com', 3, 5, 'CSDS', 'KCS-551 CSDS'),
+(125, 'shobha.g@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-551 CSDS'),
+(126, 'birendra@gmail.com', 3, 5, 'CSDS', 'KCS-551 CSDS'),
+(127, 'aparna@gmail.com', 3, 5, 'CSDS', 'KDS-551 CSDS'),
+(128, 'shobha.g@jssaten.ac.in', 3, 5, 'CSDS', 'KDS-551 CSDS'),
+(129, 'puneeta.singh@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-553 CSDS'),
+(130, 'anuradha.singh@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-553 CSDS'),
+(131, 'pawan.mishra@jssaten.ac.in', 3, 5, 'CSDS', 'KCS-553 CSDS');
+
 -- --------------------------------------------------------
 
 --
@@ -180,7 +427,7 @@ CREATE TABLE `subjects` (
   `year` int(11) DEFAULT NULL,
   `semester` int(11) DEFAULT NULL,
   `section_` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `subjectcode` varchar(55) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `subjectcode` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `subject` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -189,11 +436,47 @@ CREATE TABLE `subjects` (
 --
 
 INSERT INTO `subjects` (`id`, `year`, `semester`, `section_`, `subjectcode`, `subject`) VALUES
-(1, 4, 7, 'IT 1', 'KHU-701', 'Rural Development:Administration and Planning'),
-(2, 4, 7, 'IT 1', 'KCS-076', 'Software Testing'),
-(3, 4, 7, 'IT 1', 'KCS-713', 'Cloud Computing'),
-(4, 4, 7, 'IT 1', 'KOE-074', 'Renewable Energy Resources'),
-(5, 4, 7, 'IT 1', 'KIT-751A', 'Software Testing Lab');
+(1, 4, 7, 'IT', 'KHU-701 IT', 'Rural Development:Administration and Planning'),
+(2, 4, 7, 'IT', 'KCS-076 IT', 'Software Testing'),
+(3, 4, 7, 'IT', 'KCS-713 IT', 'Cloud Computing'),
+(4, 4, 7, 'IT', 'KOE-074 IT', 'Renewable Energy Resources'),
+(5, 4, 7, 'IT', 'KIT-751A IT', 'Software Testing Lab'),
+(6, 2, 3, 'IT', 'BOE-304 IT', 'Energy Science & Engineering'),
+(7, 2, 3, 'IT', 'BAS-301 IT', 'Technical Communication'),
+(8, 2, 3, 'IT', 'BCS-301 IT', 'Data Structure'),
+(9, 2, 3, 'IT', 'BCS-302 IT', 'Computer Organizaton and Architecture'),
+(10, 2, 3, 'IT', 'BCS-303 IT', 'Discrete Structures and Theory of Logic'),
+(11, 2, 3, 'IT', 'BCC-301 IT', 'Cyber Security'),
+(12, 2, 3, 'IT', 'BCS-351 IT', 'Data Structures Lab'),
+(13, 2, 3, 'IT', 'BCS-352 IT', 'Computer Organization and Architecture Lab'),
+(14, 2, 3, 'IT', 'BCS-353 IT', 'Web Designing Workshop'),
+(15, 2, 3, 'CSDS', 'BVE-301 CSDS', 'Universal Human Values'),
+(16, 2, 3, 'CSDS', 'BAS-303 CSDS', 'Maths IV'),
+(17, 2, 3, 'CSDS', 'BCS-301 CSDS', 'Data Structure'),
+(18, 2, 3, 'CSDS', 'BCS-302 CSDS', 'Computer Organization and Architecture'),
+(19, 2, 3, 'CSDS', 'BCS-303 CSDS', 'Discrete Structures and Theory of Logic'),
+(20, 2, 3, 'CSDS', 'BCC-302 CSDS', 'Python Programming'),
+(21, 2, 3, 'CSDS', 'BCS-351 CSDS', 'Data Structure Lab'),
+(22, 2, 3, 'CSDS', 'BCS-352 CSDS', 'Computer Organization Lab'),
+(23, 2, 3, 'CSDS', 'BCS-353 CSDS', 'Web Designing Workshop Lab'),
+(24, 3, 5, 'IT', 'KCS-501 IT', 'Database Management System'),
+(25, 3, 5, 'IT', 'KIT-501 IT', 'Web Technology'),
+(26, 3, 5, 'IT', 'KCS-503 IT', 'Design and Analysis of Algorithm'),
+(27, 3, 5, 'IT', 'KNC-502 IT', 'Indian Tradition, Culture and Society'),
+(28, 3, 5, 'IT', 'KOE-074_ IT', 'Object Oriented System Design'),
+(29, 3, 5, 'IT', 'KCS-055 IT', 'Machine Learning Technique'),
+(30, 3, 5, 'IT', 'KCS-551 IT', 'Database Management System Lab'),
+(31, 3, 5, 'IT', 'KIT-551 IT', 'Web Technology Lab'),
+(32, 3, 5, 'IT', 'KCS-553 IT', 'Design and Analysis of Algorithm Lab'),
+(33, 3, 5, 'CSDS', 'KCS-501 CSDS', 'Database Management System'),
+(34, 3, 5, 'CSDS', 'KDS-501 CSDS', 'Introduction to Data Analytics and Visualization'),
+(35, 3, 5, 'CSDS', 'KCS-503 CSDS', 'Design and Analysis of Algorithm'),
+(36, 3, 5, 'CSDS', 'KNC-501 CSDS', 'Constitution of India Law and Engineering'),
+(37, 3, 5, 'CSDS', 'KAI-051 CSDS', 'Mathematical Foundation AI,ML, Data Science'),
+(38, 3, 5, 'CSDS', 'KCS-055 CSDS', 'Machine Learning Techniques'),
+(39, 3, 5, 'CSDS', 'KCS-551 CSDS', 'Database Management System Lab'),
+(40, 3, 5, 'CSDS', 'KDS-551 CSDS', 'Data Analytics and Visualization Lab'),
+(41, 3, 5, 'CSDS', 'KCS-553 CSDS', 'Design and Analysis of Algorithm Lab');
 
 -- --------------------------------------------------------
 
@@ -226,7 +509,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `year`, `semester`, `department`, `section`, `fname`, `lname`, `email`, `urollno`, `addno`, `password`, `contactno`, `img`, `posting_date`, `feedback`, `activationcode`, `status`) VALUES
-(42, 2, 4, 'Information Technology', 'IT 1', 'Yash', 'Gupta', 'yashgupta0911@gmail.com', '2100910139009', '21DLIT009', 'Test@12345', '7905047835', 'fotor_2023-3-24_20_50_49.png', '2023-02-28 16:28:24', 1, 'fa65903dc2f4501b964aea4b10d79b2a', 1),
+(42, 4, 7, 'Information Technology', 'IT 1', 'Yash', 'Gupta', 'yashgupta0911@gmail.com', '2100910139009', '21DLIT009', 'Test@12345', '7905047835', 'fotor_2023-3-24_20_50_49.png', '2023-02-28 16:28:24', 0, 'fa65903dc2f4501b964aea4b10d79b2a', 1),
 (46, 1, 2, 'Computer Science And Engineering', 'B 3', 'Shubham', 'Kumar', '22cs116@jssaten.ac.in', '0', '22CS116.', 'Jss Aten @ 1234', '8287359082', NULL, '2023-03-02 05:44:11', 1, 'b43f5902c8994c4ed8715f39bd0debd0', 1),
 (47, 1, 2, 'Computer Science And Engineering', 'B 1', 'shreyansh', 'garg', 'shreyanshgarg505@gmail.com', '22', '22CS006.', 'Princeof@123', '9568490059', NULL, '2023-03-02 05:46:26', 1, 'b1626a47b0388e2fbc61c3b988c34792', 1),
 (48, 1, 2, 'Computer Science And Engineering', 'B 1', 'Akanksha', 'Sharma', '22CS153@jssaten.ac.n', '2000910139153', '22CS153.', 'Akanksha@17', '7617400705', NULL, '2023-03-02 05:48:00', 0, 'db191691ce05ab799e2e7a883525ce7e', 0),
@@ -280,7 +563,7 @@ INSERT INTO `users` (`id`, `year`, `semester`, `department`, `section`, `fname`,
 (105, 1, 2, 'Civil Engineering', 'B 8', 'Harendra pratap ', 'singh', 'harendrapratapsingh30@gmail.com', '22CE011', '22CE011.', 'Harry@1234', '8887143042', NULL, '2023-03-02 06:07:15', 1, '49a1cd743c7a6648b4197e26d0ef7942', 1),
 (106, 1, 2, 'Electrical And Electronics Engineering', 'B 7', 'Anuj', 'Pandey', 'anuj6012p@gmail.com', '22EEE001', '22EEE001.', 'jss@noidaEEE1', '6393644901', NULL, '2023-03-02 06:07:52', 1, 'f163a27b6c7777a9b86a1b76425d306b', 1),
 (107, 1, 2, 'Computer Science (AL & ML)', 'B 5', 'Prisha', 'Agrawal', 'prishaa19@gmail.com', '22AIML130', '22AIML130', 'Something19', '9871114134', NULL, '2023-03-02 06:07:55', 1, '8e9dc42e5a6a2fd398bb524c084404ef', 1),
-(108, 1, 2, 'Computer Science And Engineering', 'B 1', 'YASHVARDHAN', 'DIXIT', '22cs039@jssaten.ac.in', '22CS039', '22CS039.', 'Yash@2004', '9111853379', NULL, '2023-03-02 06:07:57', 1, '3f824f469cc154ef1ddbe8ae5e520622', 1),
+(108, 4, 7, 'Computer Science And Engineering', 'IT 2', 'YASHVARDHAN', 'DIXIT', '22cs039@jssaten.ac.in', '22CS039', '22CS039.', 'Yash@2004', '9111853379', NULL, '2023-03-02 06:07:57', 1, '3f824f469cc154ef1ddbe8ae5e520622', 1),
 (109, 1, 2, 'Computer Science (AL & ML)', 'B 5', 'Harigovind', 'Yadav', 'hgy2506@gmail.com', '22AIML097', '22AIML097', 'Gopal#2005', '7302359610', 'Snapchat-2061691331.jpg', '2023-03-02 06:08:13', 1, '39e313a87d943a602700ce9ecb33652e', 1),
 (110, 1, 2, 'Computer Science (AL & ML)', 'B 5', 'krishna ', 'mittal', 'krishnamittal2804@gmail.com', '22aiml080', '22aiml080', 'Akashdeep123456', '7455807311', NULL, '2023-03-02 06:08:25', 1, 'd3ceafca9266922496ee437dfa9e9cd0', 1),
 (111, 1, 2, 'Computer Science (AL & ML)', 'B 5', 'Abhishek', 'Singh', '22CSAIML082@jssaten.ac.in', '22AIML082', '22AIML082', 'TalkShort@123', '9335327042', NULL, '2023-03-02 06:08:29', 1, '2df2f8e8ec1e74d2b6fc603104f75a45', 1),
@@ -368,7 +651,6 @@ INSERT INTO `users` (`id`, `year`, `semester`, `department`, `section`, `fname`,
 (205, 1, 2, 'Electrical And Electronics Engineering', 'B 7', 'Aditi', 'Upadhyaya', 'bsbaditi2003@gmail.com', '22EEE045', '22EEE045.', 'P@2003@p', '8840917349', NULL, '2023-03-02 06:32:48', 1, '23d43d141e4910783f120b961d16207a', 1),
 (206, 1, 2, 'Electrical And Electronics Engineering', 'B 7', 'Shreya ', 'Chaubey', 'skchaubey494@gmail.com', '22EEE046', '22EEE046.', 'Wtfidk.4', '8595823584', NULL, '2023-03-02 06:33:31', 1, '4e003e057500b842b198474c16609350', 1),
 (207, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'shraddhansh ', 'singh', '22csaiml016@jssaten.ac.in', '22AIML016', '22AIML016', '22Aiml016', '6306780311', NULL, '2023-03-02 06:34:03', 0, 'f059cf3c97a8c63eab1d67c602f3a9e9', 0),
-(208, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'Yuvraj ', 'Singh', 'yuvrajsingh1138@gmail.com', '22AIML006', '22AIML006', 'Yuvraj@1138', '8957586860', NULL, '2023-03-02 06:34:08', 1, '153979cd31209f89d1b47de920f6115e', 1),
 (209, 1, 2, 'Computer Science (AL & ML)', 'B 4', 'aniket singh ', 'yadav', 'singhaniyadav1704@gmal.com', '22aiml017', '22aiml017', 'Aniket@1704', '8090298527', NULL, '2023-03-02 06:34:51', 0, '0fc05ed5470e4b0f5bf971548298a959', 0),
 (210, 1, 2, 'Electrical Engineering', 'B 6', 'Shriyansh', 'Pandey', 'artipandey342@gmail.com', '22EE013', '22EE013.', 'Pandey@0002', '8580612386', NULL, '2023-03-02 06:35:29', 0, 'a30cb0d683d33d083638df9ad7807261', 1),
 (211, 1, 0, 'Electrical And Electronics Engineering', 'B 7', 'aanya ', 'bahuguna', 'deepakbahuguna99@2004', '22EEE057', '22EEE057.', 'Music@2004', '9205702869', NULL, '2023-03-02 06:38:16', 0, 'd85931f12643a1d02e5c1e6ced406337', 0),
@@ -454,8 +736,8 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `courseoutcomes`
   ADD PRIMARY KEY (`sno`),
-  ADD KEY `subjectcode_fk` (`subjectcode`),
-  ADD KEY `subject_fk` (`subject`);
+  ADD KEY `subjectcode` (`subjectcode`),
+  ADD KEY `subject` (`subject`);
 
 --
 -- Indexes for table `department`
@@ -483,26 +765,27 @@ ALTER TABLE `facultyresponse`
 --
 ALTER TABLE `respone`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `facultyemail_fk` (`facultyemail`),
   ADD KEY `usersemail_fk` (`usersemail`),
-  ADD KEY `responsesubjectcode_fk` (`subjectcode`),
-  ADD KEY `responsesubject_fk` (`subject`);
+  ADD KEY `subjectcode` (`subjectcode`),
+  ADD KEY `facultyemail` (`facultyemail`),
+  ADD KEY `subject` (`subject`);
 
 --
 -- Indexes for table `subjectalloted`
 --
 ALTER TABLE `subjectalloted`
   ADD PRIMARY KEY (`sno`),
-  ADD KEY `subjectAllotedFacultyEmail_fk` (`facultyemail`),
-  ADD KEY `suballoted_fk` (`suballoted`);
+  ADD KEY `suballoted` (`suballoted`),
+  ADD KEY `facultyemail` (`facultyemail`);
 
 --
 -- Indexes for table `subjects`
 --
 ALTER TABLE `subjects`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `subjectcode` (`subjectcode`),
-  ADD UNIQUE KEY `subject` (`subject`);
+  ADD UNIQUE KEY `section_` (`section_`,`subjectcode`,`subject`),
+  ADD KEY `subjectcode` (`subjectcode`),
+  ADD KEY `subject` (`subject`);
 
 --
 -- Indexes for table `users`
@@ -545,7 +828,7 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `respone`
 --
 ALTER TABLE `respone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1343;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1450;
 
 --
 -- AUTO_INCREMENT for table `subjectalloted`
@@ -557,7 +840,7 @@ ALTER TABLE `subjectalloted`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -573,7 +856,7 @@ ALTER TABLE `users`
 -- Constraints for table `courseoutcomes`
 --
 ALTER TABLE `courseoutcomes`
-  ADD CONSTRAINT `subject_fk` FOREIGN KEY (`subject`) REFERENCES `subjects` (`subject`),
+  ADD CONSTRAINT `subject_fk` FOREIGN KEY (`subject`) REFERENCES `subjects` (`subject`) ON UPDATE CASCADE,
   ADD CONSTRAINT `subjectcode_fk` FOREIGN KEY (`subjectcode`) REFERENCES `subjects` (`subjectcode`) ON UPDATE CASCADE;
 
 --
@@ -588,17 +871,17 @@ ALTER TABLE `facultyresponse`
 -- Constraints for table `respone`
 --
 ALTER TABLE `respone`
-  ADD CONSTRAINT `facultyemail_fk` FOREIGN KEY (`facultyemail`) REFERENCES `faculty` (`email`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `responsesubject_fk` FOREIGN KEY (`subject`) REFERENCES `subjects` (`subject`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `facultyemail` FOREIGN KEY (`facultyemail`) REFERENCES `faculty` (`email`) ON UPDATE CASCADE,
   ADD CONSTRAINT `responsesubjectcode_fk` FOREIGN KEY (`subjectcode`) REFERENCES `subjects` (`subjectcode`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `usersemail_fk` FOREIGN KEY (`usersemail`) REFERENCES `users` (`email`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `subjectname_fk` FOREIGN KEY (`subject`) REFERENCES `subjects` (`subject`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `useremail_fk` FOREIGN KEY (`usersemail`) REFERENCES `users` (`email`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `subjectalloted`
 --
 ALTER TABLE `subjectalloted`
-  ADD CONSTRAINT `suballoted_fk` FOREIGN KEY (`suballoted`) REFERENCES `subjects` (`subjectcode`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `subjectAllotedFacultyEmail_fk` FOREIGN KEY (`facultyemail`) REFERENCES `faculty` (`email`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `facultyemail_fk` FOREIGN KEY (`facultyemail`) REFERENCES `faculty` (`email`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `subjectalloted_fk` FOREIGN KEY (`suballoted`) REFERENCES `subjects` (`subjectcode`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

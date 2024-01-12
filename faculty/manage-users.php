@@ -27,9 +27,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
         <link href="../css/style.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
         </script>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
 
     </head>
 
@@ -53,28 +50,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                 Registered Students Details
                             </div>
                             <div class="card-body">
-                                <!-- <div>
-                                    <label for="filterYear">Year:</label>
-                                    <select id="filterYear">
-                                        <option value="">All</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="filterSemester">Semester:</label>
-                                    <select id="filterSemester">
-                                        <option value="">All</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="filterSection">Section:</label>
-                                    <select id="filterSection">
-                                        <option value="">All</option>
-                                    </select>
-                                </div> -->
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
@@ -144,24 +119,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
 
                                     </tbody>
                                 </table>
-                                <script>
-                                    $(document).ready(function() {
-                                        // Initialize DataTable
-                                        var table = $('#datatablesSimple').DataTable();
-
-                                        // Add event listeners to the filter dropdowns
-                                        $('#filterYear, #filterSemester, #filterSection').on('change', function() {
-                                            var selectedYear = $('#filterYear').val();
-                                            var selectedSemester = $('#filterSemester').val();
-                                            var selectedSection = $('#filterSection').val();
-
-                                            // Apply the filters to the DataTable
-                                            table.columns(4).search(selectedYear).draw(); // 4 is the index of the 'Year' column
-                                            table.columns(5).search(selectedSemester).draw(); // 5 is the index of the 'Semester' column
-                                            table.columns(6).search(selectedSection).draw(); // 6 is the index of the 'Section' column
-                                        });
-                                    });
-                                </script>
                                 <!-- <button type="button" class="btn btn-outline-primary">Download Excel Sheet</button> -->
                             </div>
                         </div>

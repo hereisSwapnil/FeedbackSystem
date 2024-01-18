@@ -33,10 +33,10 @@
                       Create Feedback Form
                   </a> -->
 
-                <a class="nav-link" href="view-cos.php">
+                <!-- <a class="nav-link" href="view-cos.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-info"></i></div>
                     View Course Outcome
-                </a>
+                </a> -->
 
                 <a class="nav-link" href="manage_course_outcome.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-plus"></i></div>

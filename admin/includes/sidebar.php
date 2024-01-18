@@ -38,9 +38,9 @@
                       Add Admin
                   </a>
 
-                  <a class="nav-link" href="manage-coa.php">
-                      <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                      Manage Coa
+                  <a class="nav-link" href="view-cos.php">
+                      <div class="sb-nav-link-icon"><i class="fa fa-info" aria-hidden="true"></i></div>
+                      View Course Outcomes
                   </a>
 
                   <a class="nav-link" href="add-subject.php">

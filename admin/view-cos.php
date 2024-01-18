@@ -17,7 +17,7 @@ if (strlen($_SESSION['adminid']) == 0) {
     }
 }
 
-$year = isset($_POST['year']) ? $_POST['year'] : '1'; // Default to 1 if not selected
+$year = isset($_POST['year']) ? $_POST['year'] : '2'; // Default to 2 if not selected
 $sql = "SELECT year, subjectcode, subject, CO1, CO2, CO3, CO4, CO5, CO6 FROM courseoutcomes WHERE year = '$year'";
 $result = mysqli_query($con, $sql);
 ?>
@@ -66,7 +66,6 @@ $result = mysqli_query($con, $sql);
                                 <tr>
                                     <th>Year
                                         <select id="year" name="year" onchange="onYearChange()">
-                                            <option value="1" <?php if ($year == '1') echo 'selected'; ?>>1</option>
                                             <option value="2" <?php if ($year == '2') echo 'selected'; ?>>2</option>
                                             <option value="3" <?php if ($year == '3') echo 'selected'; ?>>3</option>
                                             <option value="4" <?php if ($year == '4') echo 'selected'; ?>>4</option>

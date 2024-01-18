@@ -38,6 +38,16 @@
                       Add Admin
                   </a>
 
+                  <a class="nav-link" href="manage-coa.php">
+                      <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                      Manage Coa
+                  </a>
+
+                  <a class="nav-link" href="add-subject.php">
+                      <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                      Add Subject
+                  </a>
+
                   <!-- <a class="nav-link" href="bwdates-report-ds.php">
                       <div class="sb-nav-link-icon"><i class="fa fa-calendar"></i></div>
                       B/w Dates Report Students

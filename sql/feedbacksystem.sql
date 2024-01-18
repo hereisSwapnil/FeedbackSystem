@@ -150,7 +150,8 @@ CREATE TABLE `faculty` (
   `dept` varchar(255) NOT NULL,
   `section` varchar(55) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `status` INT DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --

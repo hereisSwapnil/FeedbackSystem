@@ -1,27 +1,23 @@
-<?php session_start(); 
+<?php session_start();
 include_once('../includes/config.php');
 // Code for login 
-if(isset($_POST['login']))
-{
-  $facultyemail=$_POST['email'];
-  $pass=($_POST['password']);
-$ret=mysqli_query($con,"SELECT * FROM faculty WHERE email='$facultyemail' and password='$pass'");
-$num=mysqli_fetch_array($ret);
-if($num>0)
-{
-$extra="dashboard.php";
-$_SESSION['login']=$_POST['email'];
-$_SESSION['facultyid']=$num['id'];
-echo "<script>window.location.href='".$extra."'</script>";
-exit();
-}
-else
-{
-echo "<script>alert('Invalid email or password');</script>";
-$extra="index.php";
-echo "<script>window.location.href='".$extra."'</script>";
-exit();
-}
+if (isset($_POST['login'])) {
+    $facultyemail = $_POST['email'];
+    $pass = ($_POST['password']);
+    $ret = mysqli_query($con, "SELECT * FROM faculty WHERE email='$facultyemail' and password='$pass'");
+    $num = mysqli_fetch_array($ret);
+    if ($num > 0) {
+        $extra = "dashboard.php";
+        $_SESSION['login'] = $_POST['email'];
+        $_SESSION['facultyid'] = $num['id'];
+        echo "<script>window.location.href='" . $extra . "'</script>";
+        exit();
+    } else {
+        echo "<script>alert('Invalid email or password');</script>";
+        $extra = "index.php";
+        echo "<script>window.location.href='" . $extra . "'</script>";
+        exit();
+    }
 }
 ?>
 
@@ -40,21 +36,21 @@ exit();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
     </script>
     <script>
-    function showpass() {
-        var x = document.getElementById("password");
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
+        function showpass() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
-    }
     </script>
 </head>
 <!-- <body class="bg-primary"> -->
 
 <body>
 
-    <?php include_once('includes/header.php');?>
+    <?php include_once('includes/header.php'); ?>
 
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
@@ -73,15 +69,13 @@ exit();
                                         <form method="post">
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" name="email" type="text" placeholder="email"
-                                                    required />
+                                                <input class="form-control" name="email" type="text" placeholder="email" required />
                                                 <label for="inputEmail">Email</label>
                                             </div>
 
 
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="password" name="password"
-                                                    type="password" placeholder="Password" required />
+                                                <input class="form-control" id="password" name="password" type="password" placeholder="Password" required />
                                                 <label for="inputPassword">Password</label>
                                                 <input type="checkbox" onclick="showpass()"> Show Password
                                             </div>
@@ -89,12 +83,12 @@ exit();
 
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password-recovery.php">Forgot Password?</a>
-                                                <button class="btn btn-primary" name="login"
-                                                    type="submit">Login</button>
+                                                <button class="btn btn-primary" name="login" type="submit">Login</button>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="./faculty_signup.php">Need an account? Sign up!</a></div>
                                         <div class="small"><a href="../index.php">Back to Home Page</a></div>
                                     </div>
                                 </div>
@@ -103,7 +97,7 @@ exit();
                     </div>
             </main>
         </div>
-        <?php include('../includes/footer.php');?>
+        <?php include('../includes/footer.php'); ?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>

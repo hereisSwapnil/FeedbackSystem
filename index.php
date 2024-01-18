@@ -99,3 +99,55 @@
 </body>
 
 </html>
+
+
+
+<!-- Prakhar's changes -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSSATEN-SIM</title>
+    <link rel="icon" href="assets/img/jsslogoicon.png">
+    <link rel="stylesheet" href="css/style_p.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;1,300;1,400&family=Poppins&family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="head">
+        <div class="head1">
+            <img src="assets/img/jsslogoicon.png" alt="jsslogo">
+        </div>
+        <div class="head2">
+            <div class="t1">JSS MAHAVIDYAPEETHA</div>
+            <div class="t2"><b>JSS Academy of Technical Education, Noida</b></div>
+
+            <marquee width="100%" height="105px" style="font-size: 30px;" behavior="scroll" bgcolor="white">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Approved by All India Council for Technical Education (AICTE), New Delhi.<br>
+                UG programs are Accredited by National Board of Accreditation (NBA), New Delhi.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Affiliated to Dr APJ Abdul Kalam Technical University, Uttar Pradesh, Lucknow
+            </marquee>
+        </div>
+        <div class="head3">
+            <img src="assets/img/abc.png">
+        </div>
+    </div>
+    <hr>
+    <h1 style="text-align: center;">Select Your Profile</h4>
+        <div class="profile">
+            <button class="student"><i class="fa-solid fa-book-open-reader"></i>Student</button>
+            <button class="faculty"><i class="fa-solid fa-chalkboard-user"></i>Faculty</button>
+            <button class="admin"><i class="fa-solid fa-user-tie"></i>Admin&nbsp;</button>
+        </div><br><br><br><br><br><br><br><br><br><br>
+        <div class="footer">
+            <div class="text1">Copyright <i class="fa-regular fa-copyright"></i> 2024 All Rights Reserved</div>
+            <div class="text2">Designed & Developed by Yash & Ayush</div>
+        </div>
+</body>
+
+</html> -->

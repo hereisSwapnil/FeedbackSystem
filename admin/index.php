@@ -88,7 +88,7 @@ if (isset($_POST['login'])) {
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="./admin_signup.php">Need an account? Sign up!</a></div>
+                                        <!-- <div class="small"><a href="./admin_signup.php">Need an account? Sign up!</a></div> -->
                                         <div class="small"><a href="../index.php">Back to Home Page</a></div>
                                     </div>
                                 </div>

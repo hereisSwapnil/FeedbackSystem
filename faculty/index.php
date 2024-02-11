@@ -10,8 +10,13 @@ if (isset($_POST['login'])) {
         $extra = "dashboard.php";
         $_SESSION['login'] = $_POST['email'];
         $_SESSION['facultyid'] = $num['id'];
-        echo "<script>window.location.href='" . $extra . "'</script>";
-        exit();
+        $_SESSION['status'] = $num['status'];
+        if ($_SESSION['status'] == 1) {
+            echo "<script>window.location.href='" . $extra . "'</script>";
+            exit();
+        } else {
+            echo "<script>alert('Your account is not approved yet.');</script>";
+        }
     } else {
         echo "<script>alert('Invalid email or password');</script>";
         $extra = "index.php";

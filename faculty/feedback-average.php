@@ -73,7 +73,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback</th>
+                                            <th>Subject Feedback (Out of 5)</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -93,7 +93,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback</th>
+                                            <th>Subject Feedback (Out of 5)</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>

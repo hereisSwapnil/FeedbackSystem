@@ -57,7 +57,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <!-- <th>Section</th> -->
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Section Wise<br>(Out Of 5)</th>
+                                            <th>Subject Feedback<br>(Out Of 5)</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -79,7 +79,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <!-- <th>Section</th> -->
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Section Wise<br>(Out Of 5)</th>
+                                            <th>Subject Feedback<br>(Out Of 5)</th>
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>

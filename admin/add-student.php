@@ -15,6 +15,25 @@ if (strlen($_SESSION['adminid'] == 0)) {
         $addno = $_POST['addno'];
         $password = $_POST['password'];
         $contact = $_POST['contact'];
+        $department = $_POST['department'];
+        $activationcode = 1;
+        $status = 1;
+
+        echo "<script>";
+        echo "console.log('Year: " . $year . "');";
+        echo "console.log('Semester: " . $semester . "');";
+        echo "console.log('Section: " . $section . "');";
+        echo "console.log('First Name: " . $fname . "');";
+        echo "console.log('Last Name: " . $lname . "');";
+        echo "console.log('Email: " . $email . "');";
+        echo "console.log('University Roll No.: " . $urollno . "');";
+        echo "console.log('Admission No.: " . $addno . "');";
+        echo "console.log('Password: " . $password . "');";
+        echo "console.log('Contact No.: " . $contact . "');";
+        echo "console.log('Department: " . $department . "');";
+        echo "</script>";
+
+
         $sql = mysqli_query($con, "select id from users where email='$email'");
         $row = mysqli_num_rows($sql);
 
@@ -30,10 +49,13 @@ if (strlen($_SESSION['adminid'] == 0)) {
         } else if ($row2 > 0) {
             echo "<script>alert('addno already exist with another account. Please try with other addno');</script>";
         } else {
-            $msg = mysqli_query($con, "insert into users(year,semester,section,fname,lname,email,urollno,addno,password,contactno) values('$year','$semester','$section','$fname','$lname','$email','$urollno','$addno.','$password','$contact')");
-
-            if ($msg) {
-                echo "<script>alert('Registered successfully');</script>";
+            $msg = mysqli_query($con, "insert into users(year,semester,section,fname,lname,email,urollno,addno,password,contactno,department,activationcode,status) values('$year','$semester','$section','$fname','$lname','$email','$urollno','$addno.','$password','$contact','$department', '$activationcode', '$status')");
+            // echo "<script>console.log('Error: " . mysqli_error($con) . "');</script>";
+            if (!$msg) {
+                // Log the error message to the console
+                echo "<script>console.log('Department: " . $con . "');</script>";
+            } else {
+                echo "<script>alert('Student created successfully');</script>";
                 echo "<script type='text/javascript'> document.location = 'manage-users.php'; </script>";
             }
         }
@@ -85,6 +107,15 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                         <tr>
                                             <th>Last Name</th>
                                             <td><input class="form-control" id="lname" name="lname" type="text" required /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Department</th>
+                                            <td>
+                                                <select name="department" class="form-control" id="department" required>
+                                                    <option value="" selected disabled>Select Department</option>
+                                                    <option>Information Technology</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th>Year</th>
@@ -144,7 +175,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                         </script>
                                         <tr>
                                             <th>Email</th>
-                                            <td><input class="form-control" id="email" name="email" type="text" required /></td>
+                                            <td><input class="form-control" id="email" name="email" type="email" required /></td>
                                         </tr>
                                         <tr>
                                             <th>University Roll No.</th>
@@ -152,11 +183,11 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                         </tr>
                                         <tr>
                                             <th>Admission No.</th>
-                                            <td><input class="form-control" id="addno" name="addno" type="text" required /></td>
+                                            <td><input class="form-control" id="addno" name="addno" type="text" maxlength="9" required /></td>
                                         </tr>
                                         <tr>
                                             <th>Contact No.</th>
-                                            <td><input class="form-control" id="contact" name="contact" type="text" required /></td>
+                                            <td><input class="form-control" id="contact" name="contact" type="text" maxlength="10" required /></td>
                                         </tr>
                                         <tr>
                                             <th>Password</th>

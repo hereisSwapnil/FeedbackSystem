@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <?php session_start();
 require_once('includes/config.php');
 
@@ -149,7 +150,6 @@ if (isset($_POST['submit'])) {
     </script>
 
 </head>
-<!-- <body class="bg-primary"> -->
 
 <body>
 
@@ -205,14 +205,67 @@ if (isset($_POST['submit'])) {
                                                 </select>
                                             </div>
 
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <!-- <label for="year">Year</label> -->
+                                                        <select name="year" class="form-control" id="year">
+                                                            <option selected disabled>Year</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <!-- <label for="semester">Semester</label> -->
+                                                        <select name="semester" class="form-control" id="semester">
+                                                            <option selected disabled>Semester</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="form-floating mb-3">
                                                 <!-- <label for="semester">Section</label> -->
-                                                <select name="section" class="form-control" id="section" required>
-                                                    <option value="" selected disabled>Section</option>
-                                                    <option>IT 1</option>
-                                                    <option>IT 2</option>
-                                                </select>
+                                                <td>
+                                                    <select name="section" class="form-control" id="section">
+                                                        <option selected disabled>Section</option>
+                                                    </select>
+                                                </td>
                                             </div>
+
+                                            <script>
+                                                $(document).ready(function() {
+                                                    $('#year').change(function() {
+                                                        var selectedYear = $(this).val();
+                                                        $('#semester').empty();
+                                                        $('#section').empty();
+                                                        if (selectedYear === '2') {
+                                                            $('#semester').append('<option value="3">3</option>');
+                                                            $('#semester').append('<option value="4">4</option>');
+                                                            $('#section').append('<option value="IT 1">IT 1</option>');
+                                                            $('#section').append('<option value="IT 2">IT 2</option>');
+                                                            $('#section').append('<option value="IT 3">IT 3</option>');
+                                                            $('#section').append('<option value="CSDS 1">CSDS 1</option>');
+                                                            $('#section').append('<option value="CSDS 2">CSDS 2</option>');
+                                                        } else if (selectedYear === '3') {
+                                                            $('#semester').append('<option value="5">5</option>');
+                                                            $('#semester').append('<option value="6">6</option>');
+                                                            $('#section').append('<option value="IT 1">IT 1</option>');
+                                                            $('#section').append('<option value="IT 2">IT 2</option>');
+                                                            $('#section').append('<option value="CSDS">CSDS</option>');
+                                                        } else if (selectedYear === '4') {
+                                                            $('#semester').append('<option value="7">7</option>');
+                                                            $('#semester').append('<option value="8">8</option>');
+                                                            $('#section').append('<option value="IT 1">IT 1</option>');
+                                                            $('#section').append('<option value="IT 2">IT 2</option>');
+                                                        }
+                                                    });
+                                                });
+                                            </script>
 
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
@@ -228,30 +281,6 @@ if (isset($_POST['submit'])) {
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <!-- <label for="semester">Semester</label> -->
-                                                        <select name="semester" class="form-control" id="semester" required>
-                                                            <option value="" selected disabled>Semester</option>
-                                                            <option>7</option>
-                                                            <option>8</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <!-- <label for="year">Year</label> -->
-                                                        <select name="year" class="form-control" id="year" required>
-                                                            <option value="" selected disabled>Year</option>
-                                                            <option>4</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
 
                                             <div class="row mb-3">
                                                 <div class="col-md-6">

@@ -1,5 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<?php session_start();
+<?php
+session_start();
 require_once('includes/config.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -22,96 +23,61 @@ if (isset($_POST['submit'])) {
     $contact = $_POST['contact'];
     $status = 0;
     $activationcode = md5($email . time());
-    $sql = mysqli_query($con, "select id from users where email='$email'");
+
+    $sql = mysqli_query($con, "SELECT id FROM users WHERE email='$email'");
     $row = mysqli_num_rows($sql);
 
-    $sql1 = mysqli_query($con, "select id from users where urollno='$urollno'");
+    $sql1 = mysqli_query($con, "SELECT id FROM users WHERE urollno='$urollno'");
     $row1 = mysqli_num_rows($sql1);
 
-    $sql2 = mysqli_query($con, "select id from users where addno='$addno'");
+    $sql2 = mysqli_query($con, "SELECT id FROM users WHERE addno='$addno'");
     $row2 = mysqli_num_rows($sql2);
+
     if ($row > 0) {
-        echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
+        echo "<script>alert('Email id already exists with another account. Please try with another email id');</script>";
     } else if ($row1 > 0) {
-        echo "<script>alert('urollno already exist with another account. Please try with other urollno');</script>";
+        echo "<script>alert('Urollno already exists with another account. Please try with another urollno');</script>";
     } else if ($row2 > 0) {
-        echo "<script>alert('addno alrjseady exist with another account. Please try with other addno');</script>";
+        echo "<script>alert('Addno already exists with another account. Please try with another addno');</script>";
     } else {
-        $msg = mysqli_query($con, "insert into users(year,semester,department,section,fname,lname,email,urollno,addno,password,contactno,activationcode,status) values('$year','$semester','$department','$section','$fname','$lname','$email','$urollno','$addno.','$password','$contact','$activationcode','$status')");
+        $msg = mysqli_query($con, "INSERT INTO users(year, semester, department, section, fname, lname, email, urollno, addno, password, contactno, activationcode, status) VALUES('$year', '$semester', '$department', '$section', '$fname', '$lname', '$email', '$urollno', '$addno', '$password', '$contact', '$activationcode', '$status')");
 
         if ($msg) {
+            $mail = new PHPMailer(true);
 
+            try {
+                //Server settings
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'swapnilskumar99@gmail.com'; // replace with your email
+                $mail->Password = 'iqae sirh lxnk yekb'; // replace with your email password or app password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port = 587;
 
-            $mail = new PHPMailer;
-            // if(isset($_POST['send'])){
+                //Recipients
+                $mail->setFrom('swapnilskumar99@gmail.com', 'JSS-FMS'); // replace with your email
+                $mail->addAddress($email);
 
+                //Content
+                $mail->isHTML(true);
+                $mail->Subject = 'Verify your Email';
+                $bodyContent = "Dear $fname,<br><br>";
+                $bodyContent .= "Please click the following link for verifying and activation of your account:<br>";
+                $bodyContent .= "<a href='http://localhost/FeedbackSystem/email_verification.php?code=$activationcode'>Click Here</a>";
+                $mail->Body = $bodyContent;
 
-            // $femail=$_POST['femail'];
-
-            // $row1=mysqli_query($con,"select email,password,fname from users where email='$femail'");
-            // $row2=mysqli_fetch_array($row1);
-            // if($row2>0)
-            // {
-            // $toemail = $row2['email'];
-            $toemail = $email;
-            // $fname = $row2['fname'];
-            $subject = "Verify you Email";
-            // $password=$row2['password'];
-            $message = "Please click The following link For verifying and activation of your account <div style='padding-top:10px;'><a href='http://localhost/feedbacksystem/email_verification.php?code=$activationcode'>Click Here</a></div>";
-            $mail->isSMTP();                            // Set mailer to use SMTP
-            $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
-
-
-
-            $mail->SMTPAuth = true;                     // Enable SMTP authentication
-            $mail->Username = '20it99@jssaten.ac.in';    // SMTP username
-            $mail->Password = 'Password890@#'; // SMTP password
-            $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 587;                          // TCP port to connect to
-            $mail->setFrom('20it99@jssaten.ac.in', 'JSS-SIM');
-            $mail->addAddress($toemail);   // Add a recipient
-            $mail->isHTML(true);  // Set email format to HTML
-            $bodyContent = $message;
-            $mail->Subject = $subject;
-            $bodyContent = 'Dear' . " " . $fname;
-            $bodyContent .= '<p>' . $message . '</p>';
-            $mail->Body = $bodyContent;
-            if (!$mail->send()) {
-                echo  "<script>alert('Message could not be sent');</script>";
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
-            } else {
-                echo  "<script>alert('Registration successful, Please verify in the registered Email-Id');</script>";
+                $mail->send();
+                echo "<script>alert('Registration successful. Please verify your email.');</script>";
+                echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
+            } catch (Exception $e) {
+                echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}');</script>";
             }
-            echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
-            // }
-            // else
-            // {
-            // echo "<script>alert('Email not register with us');</script>";   
-            // }
-            // }
-
-
-
-
-
-            //     $to=$email;
-            //     echo "<script>alert('Registered successfully');</script>";
-            //     $subject="Email verification (JSS-SIM)";
-            // $headers .= "MIME-Version: 1.0"."\r\n";
-            // $headers .= 'Content-type: text/html; charset=UTF-8"'."\r\n";
-            // $headers .= 'From:JSS-SIM | Feedback Interface <JSS-SIM>'."\r\n";
-            // $ms.="<html></body><div><div>Dear $fname,</div></br></br>";
-            // $ms.="<div style='padding-top:8px;'>Please click The following link For verifying and activation of your account</div>
-            // <div style='padding-top:10px;'>< href='email_veraification.php?code=$activationcode'>Click Here</></div>
-            // <div style='padding-top:4px;'>Powered by <a href='#'>JSS-SIM</a></div></div>
-            // </body></html>";
-            // mail($to,$subject,$ms,$headers);
-            // echo "<script>alert('Registration successful, please verify in the registered Email-Id');</script>";
-            // echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
         }
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

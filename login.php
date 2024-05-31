@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $status = $num['status'];
     if ($num > 0) {
         if ($status == 0) {
-            echo "<script>alert('Verify  your Email Id by clicking  the link In your mailbox');</script>";
+            echo "<script>alert('Verify your Email Id by clicking  the link In your mailbox');</script>";
         } else {
             $_SESSION['id'] = $num['id'];
             $_SESSION['name'] = $num['fname'];

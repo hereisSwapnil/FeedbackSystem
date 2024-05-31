@@ -4,10 +4,9 @@
                <div class="d-flex align-items-center justify-content-between small">
                    <div class="text-muted footerLeft">Copyright &copy; <?php echo date('Y'); ?> All Right Reserved</div>
                    <div class="footerRight">
-                       <a href="https://jssaten.ac.in//pview/IT" target="_blank">Designed & Developed By Yash & Aayush</a>
-
+                       <a href="https://jssaten.ac.in//pview/IT" target="_blank">Made with ❤️ in the Department of Information Technology</a>
                    </div>
                </div>
            </div>
        </footer>
-   </div> 
+   </div>

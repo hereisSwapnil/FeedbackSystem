@@ -10,8 +10,8 @@ require 'vendor/autoload.php';
 
 function getDefaultGateway()
 {
-    $result = shell_exec('/sbin/ip route');
-    if (preg_match('/default via ([\d\.]+)/', $result, $matches)) {
+    $result = shell_exec('ipconfig');
+    if (preg_match('/Default Gateway . . . . . . . . . : ([\d\.]+)/', $result, $matches)) {
         return $matches[1];
     }
     return null;

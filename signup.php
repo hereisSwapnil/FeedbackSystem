@@ -8,6 +8,18 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+function getDefaultGateway()
+{
+    $result = shell_exec('/sbin/ip route');
+    if (preg_match('/default via ([\d\.]+)/', $result, $matches)) {
+        return $matches[1];
+    }
+    return null;
+}
+
+// Usage
+$defaultGatewayIP = getDefaultGateway();
+
 //Code for Registration 
 if (isset($_POST['submit'])) {
     $year = $_POST['year'];
@@ -64,7 +76,7 @@ if (isset($_POST['submit'])) {
                 $mail->Subject = 'Verify your Email';
                 $bodyContent = "Dear $fname,<br><br>";
                 $bodyContent .= "Please click the following link for verifying and activation of your account:<br>";
-                $bodyContent .= "<a href='http://localhost/FeedbackSystem/email_verification.php?code=$activationcode'>Click Here</a>";
+                $bodyContent .= "<a href='http://$defaultGatewayIP/FeedbackSystem/email_verification.php?code=$activationcode'>Click Here</a>";
                 $mail->Body = $bodyContent;
 
                 $mail->send();

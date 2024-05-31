@@ -66,6 +66,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <th>CO-4</th>
                                             <th>CO-5</th>
                                             <th>CO-6</th>
+                                            <th>Average CO Rating</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -88,6 +89,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <th>CO-4</th>
                                             <th>CO-5</th>
                                             <th>CO-6</th>
+                                            <th>Average CO Rating</th>
                                         </tr>
                                     </tfoot>
                                     <tbody class="tbodyDisplay">
@@ -107,6 +109,13 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                         $cnt = 1;
 
                                         while ($row = mysqli_fetch_array($ret)) {
+                                            $co1 = $row['co1'];
+                                            $co2 = $row['co2'];
+                                            $co3 = $row['co3'];
+                                            $co4 = $row['co4'];
+                                            $co5 = $row['co5'];
+                                            $co6 = $row['co6'];
+                                            $averageCO = ($co1 + $co2 + $co3 + $co4 + $co5 + $co6) / 6;
                                         ?>
                                             <tr>
                                                 <td><?php echo $cnt; ?></td>
@@ -121,13 +130,13 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                                     ?>
                                                 </td>
                                                 <td><?php echo $row['subject']; ?></td>
-                                                <!-- <td><?php echo $row['sectionwise']; ?></td> -->
-                                                <td><?php echo $row['co1']; ?></td>
-                                                <td><?php echo $row['co2']; ?></td>
-                                                <td><?php echo $row['co3']; ?></td>
-                                                <td><?php echo $row['co4']; ?></td>
-                                                <td><?php echo $row['co5']; ?></td>
-                                                <td><?php echo $row['co6']; ?></td>
+                                                <td><?php echo $co1 | 0; ?></td>
+                                                <td><?php echo $co2 | 0; ?></td>
+                                                <td><?php echo $co3 | 0; ?></td>
+                                                <td><?php echo $co4 | 0; ?></td>
+                                                <td><?php echo $co5 | 0; ?></td>
+                                                <td><?php echo $co6 | 0; ?></td>
+                                                <td><?php echo round($averageCO, 2); ?></td>
                                             </tr>
                                         <?php
                                             $cnt++;

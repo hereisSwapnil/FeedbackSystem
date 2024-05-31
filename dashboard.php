@@ -1,5 +1,13 @@
 <?php session_start();
 include_once('../includes/config.php');
+
+setcookie("arraySize", "", time() - 3600);
+setcookie("index", "", time() - 3600);
+setcookie("lg", "", time() - 3600);
+setcookie("pgerfresh", "", time() - 3600);
+setcookie("subjectArrayCookie", "", time() - 3600);
+setcookie("subjectCodeArrayCookie", "", time() - 3600);
+
 if (strlen($_SESSION['facultyid'] == 0)) {
     header('location:logout.php');
 } else {

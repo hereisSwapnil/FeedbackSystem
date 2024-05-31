@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+session_start();
 include_once('../includes/config.php');
 if (strlen($_SESSION['facultyid'] == 0)) {
     header('location:logout.php');
@@ -11,7 +12,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
 
     <head>
         <link rel="shortcut icon" href="../assets/img/jsslogoicon.png" type="image/x-icon">
-
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -57,104 +57,78 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
-                                    <!-- <thead>
-                                    <tr>
-                                        <td colspan="7"></td>
-                                        <td>Faculty Feedback</td>
-                                        <td colspan="6">Course Outcome Feedback</td>
-                                    </tr>
-                                </thead> -->
                                     <thead>
                                         <tr>
-                                            <!-- <th>Sno.</th> -->
-                                            <!-- <th>First Name</th> -->
-                                            <!-- <th>Session</th>
-                                        <th>Semester Type</th> -->
                                             <th>Year</th>
                                             <th>Semester</th>
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <!-- <th>Subject Feedback (Out of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
                                             <th>CO-4</th>
                                             <th>CO-5</th>
                                             <th>CO-6</th>
+                                            <th>Average CO Rating</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <!-- <th>Sno.</th> -->
-                                            <!-- <th>First Name</th> -->
-                                            <!-- <th>Session</th>
-                                        <th>Semester Type</th>  -->
                                             <th>Year</th>
                                             <th>Semester</th>
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <!-- <th>Subject Feedback (Out of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
                                             <th>CO-4</th>
                                             <th>CO-5</th>
                                             <th>CO-6</th>
+                                            <th>Average CO Rating</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
                                         $id1 = $_SESSION['facultyid'];
                                         $sql1 = "SELECT
-                                        subjectalloted.year,
-                                        subjectalloted.semester,
-                                        subjectalloted.section,
-                                        subjectalloted.suballoted,
-                                        subjects.subject,
-                                        ROUND(AVG(respone.co1), 2) as co1,
-                                        ROUND(AVG(respone.co2), 2) as co2,
-                                        ROUND(AVG(respone.co3), 2) as co3,
-                                        ROUND(AVG(respone.co4), 2) as co4,
-                                        ROUND(AVG(respone.co5), 2) as co5,
-                                        ROUND(AVG(respone.co6), 2) as co6,
-                                        users.section
-                                    FROM
-                                        faculty
-                                    INNER JOIN subjectalloted ON subjectalloted.facultyemail = faculty.email
-                                    INNER JOIN subjects ON subjects.subjectcode = subjectalloted.suballoted
-                                    INNER JOIN respone ON respone.facultyemail = faculty.email
-                                    INNER JOIN users ON respone.usersemail = users.email
-                                    WHERE
-                                        faculty.id = $id1
-                                        AND users.section = subjectalloted.section
-                                    GROUP BY
-                                        subjectalloted.year,
-                                        subjectalloted.semester,
-                                        subjectalloted.section,
-                                        subjectalloted.suballoted,
-                                        subjects.subject,
-                                        users.section;
-                                    ";
-                                        // $ret=mysqli_query($con,"select * from faculty where id=$id1");
+                                                subjectalloted.year,
+                                                subjectalloted.semester,
+                                                subjectalloted.section,
+                                                subjectalloted.suballoted,
+                                                subjects.subject,
+                                                ROUND(AVG(respone.co1), 2) as co1,
+                                                ROUND(AVG(respone.co2), 2) as co2,
+                                                ROUND(AVG(respone.co3), 2) as co3,
+                                                ROUND(AVG(respone.co4), 2) as co4,
+                                                ROUND(AVG(respone.co5), 2) as co5,
+                                                ROUND(AVG(respone.co6), 2) as co6,
+                                                ROUND(AVG((respone.co1 + respone.co2 + respone.co3 + respone.co4 + respone.co5 + respone.co6) / 6), 2) as avg_co_rating,
+                                                users.section
+                                            FROM
+                                                faculty
+                                            INNER JOIN subjectalloted ON subjectalloted.facultyemail = faculty.email
+                                            INNER JOIN subjects ON subjects.subjectcode = subjectalloted.suballoted
+                                            INNER JOIN respone ON respone.facultyemail = faculty.email
+                                            INNER JOIN users ON respone.usersemail = users.email
+                                            WHERE
+                                                faculty.id = $id1
+                                                AND users.section = subjectalloted.section
+                                            GROUP BY
+                                                subjectalloted.year,
+                                                subjectalloted.semester,
+                                                subjectalloted.section,
+                                                subjectalloted.suballoted,
+                                                subjects.subject,
+                                                users.section;";
                                         $ret = mysqli_query($con, $sql1);
-                                        $cnt = 1;
                                         while ($row = mysqli_fetch_array($ret)) { ?>
                                             <tr>
-                                                <!-- <td><?php echo $cnt; ?></td> -->
-                                                <!-- <td><?php echo $row['fname']; ?></td> -->
-                                                <!-- <td><?php echo $row['session_']; ?></td>
-                                        <td><?php echo $row['sem_type']; ?></td> -->
                                                 <td><?php echo $row['year']; ?></td>
                                                 <td><?php echo $row['semester']; ?></td>
                                                 <td><?php echo $row['section']; ?></td>
-                                                <td>
-                                                    <?php
-                                                    $suballoted_display = explode(" ", $row['suballoted']);
-                                                    echo $suballoted_display[0];
-                                                    ?>
-                                                </td>
+                                                <td><?php echo explode(" ", $row['suballoted'])[0]; ?></td>
                                                 <td><?php echo $row['subject']; ?></td>
                                                 <td><?php echo $row['co1']; ?></td>
                                                 <td><?php echo $row['co2']; ?></td>
@@ -162,26 +136,14 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                                 <td><?php echo $row['co4']; ?></td>
                                                 <td><?php echo $row['co5']; ?></td>
                                                 <td><?php echo $row['co6']; ?></td>
-                                                <!-- <?php $temp = $row['sectionwise']; ?> -->
-                                                <!-- <td>
-
-                                            <a href="user-profile.php?uid=<?php echo $row['id']; ?>">
-                                                <i class="fas fa-edit"></i></a>
-                                            <a href="manage-users.php?id=<?php echo $row['id']; ?>"
-                                                onClick="return confirm('Do you really want to delete');"><i
-                                                    class="fa fa-trash" aria-hidden="true"></i></a>
-                                        </td> -->
+                                                <td><?php echo $row['avg_co_rating']; ?></td>
                                             </tr>
-                                        <?php  }
-
-                                        ?>
-
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                                 <button id="btnExport" onclick="Export()" type="button" class="btn btn-outline-primary">Download</button>
                                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js">
-                                </script>
+                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
                                 <script type="text/javascript">
                                     function Export() {
                                         html2canvas(document.getElementById('tblCustomers'), {
@@ -198,27 +160,14 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                         });
                                     }
                                 </script>
-                                <!-- <script>
-
-        function ExportToExcel(type, fn, dl) {
-            var elt = document.getElementById('tbl_exporttable_to_xls');
-            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
-            return dl ?
-                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-                XLSX.writeFile(wb, fn || ('Feedback Respones.' + (type || 'xlsx')));
-        }
-
-    </script> -->
                             </div>
                         </div>
-
                     </div>
                 </main>
                 <?php include_once('../includes/footer.php'); ?>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>

@@ -18,6 +18,6 @@ if (!empty($_GET['code']) && isset($_GET['code'])) {
     } else {
         $msg = "Wrong activation code.";
     }
-    echo  "<script>alert('.$msg.');</script>";
+    echo  "<script>alert('$msg');</script>";
 }
 echo "<script type='text/javascript'> document.location = 'login.php'; </script>";

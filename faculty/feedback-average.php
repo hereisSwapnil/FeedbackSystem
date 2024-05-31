@@ -10,12 +10,14 @@ if (strlen($_SESSION['facultyid'] == 0)) {
     <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
+        <link rel="shortcut icon" href="../assets/img/jsslogoicon.png" type="image/x-icon">
+
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Faculty Dashboard | JSSATEN-SIM </title>
+        <title>Faculty Dashboard | JSSATEN-FMS </title>
         <!-- <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script> -->
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
@@ -73,7 +75,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback (Out of 5)</th>
+                                            <!-- <th>Subject Feedback (Out of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -93,7 +95,7 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                             <th>Section</th>
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback (Out of 5)</th>
+                                            <!-- <th>Subject Feedback (Out of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -111,7 +113,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                         subjectalloted.section,
                                         subjectalloted.suballoted,
                                         subjects.subject,
-                                        ROUND((AVG(respone.sb1) + AVG(respone.sb2) + AVG(respone.sb3) + AVG(respone.sb4) + AVG(respone.sb5)) / 5, 2) as sectionwise,
                                         ROUND(AVG(respone.co1), 2) as co1,
                                         ROUND(AVG(respone.co2), 2) as co2,
                                         ROUND(AVG(respone.co3), 2) as co3,
@@ -155,7 +156,6 @@ if (strlen($_SESSION['facultyid'] == 0)) {
                                                     ?>
                                                 </td>
                                                 <td><?php echo $row['subject']; ?></td>
-                                                <td><?php echo $row['sectionwise']; ?></td>
                                                 <td><?php echo $row['co1']; ?></td>
                                                 <td><?php echo $row['co2']; ?></td>
                                                 <td><?php echo $row['co3']; ?></td>

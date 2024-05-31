@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	<link rel="shortcut icon" href="./assets/img/jsslogoicon.png" type="image/x-icon">
+
 	<style>
 		.container {
 			margin: 100px 400px;

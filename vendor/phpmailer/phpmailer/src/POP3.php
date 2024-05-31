@@ -1,4 +1,5 @@
 <?php
+
 /**
  * PHPMailer POP-Before-SMTP Authentication Class.
  * PHP Version 5.5.
@@ -415,7 +416,7 @@ class POP3
     {
         $this->setError(
             'Connecting to the POP3 server raised a PHP warning:' .
-            "errno: $errno errstr: $errstr; errfile: $errfile; errline: $errline"
+                "errno: $errno errstr: $errstr; errfile: $errfile; errline: $errline"
         );
     }
 }

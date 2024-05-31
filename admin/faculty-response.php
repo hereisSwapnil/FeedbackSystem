@@ -10,12 +10,14 @@ if (strlen($_SESSION['adminid'] == 0)) {
     <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
+        <link rel="shortcut icon" href="../assets/img/jsslogoicon.png" type="image/x-icon">
+
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Admin Dashboard | JSSATEN-SIM</title>
+        <title>Admin Dashboard | JSSATEN-FMS</title>
         <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
@@ -57,7 +59,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <!-- <th>Section</th> -->
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback<br>(Out Of 5)</th>
+                                            <!-- <th>Subject Feedback<br>(Out Of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -79,7 +81,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                             <!-- <th>Section</th> -->
                                             <th>Subject Code</th>
                                             <th>Subject Name</th>
-                                            <th>Subject Feedback<br>(Out Of 5)</th>
+                                            <!-- <th>Subject Feedback<br>(Out Of 5)</th> -->
                                             <th>CO-1</th>
                                             <th>CO-2</th>
                                             <th>CO-3</th>
@@ -91,7 +93,6 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                     <tbody class="tbodyDisplay">
                                         <?php
                                         $sql = "SELECT faculty.fname, faculty.lname, faculty.email, facultyresponse.year, facultyresponse.semester, facultyresponse.suballoted, subjects.subject, 
-                                        facultyresponse.sectionwise,
                                         facultyresponse.co1,
                                         facultyresponse.co2,
                                         facultyresponse.co3,
@@ -120,7 +121,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                                                     ?>
                                                 </td>
                                                 <td><?php echo $row['subject']; ?></td>
-                                                <td><?php echo $row['sectionwise']; ?></td>
+                                                <!-- <td><?php echo $row['sectionwise']; ?></td> -->
                                                 <td><?php echo $row['co1']; ?></td>
                                                 <td><?php echo $row['co2']; ?></td>
                                                 <td><?php echo $row['co3']; ?></td>

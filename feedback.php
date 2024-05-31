@@ -10,12 +10,14 @@ if (strlen($_SESSION['id'] == 0)) {
     <html lang="en">
 
     <head>
+        <link rel="shortcut icon" href="./assets/img/jsslogoicon.png" type="image/x-icon">
+
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Student Dashboard | JSSATEN-SIM </title>
+        <title>Student Dashboard | JSSATEN-FMS </title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
@@ -35,6 +37,7 @@ if (strlen($_SESSION['id'] == 0)) {
             if (document.cookie.indexOf("lg") != -1) {
                 var i = document.cookie.indexOf("index");
                 let currentIndexValue = document.cookie[i + 6];
+                console.log('Current Index Value : ' + currentIndexValue)
                 var l = document.cookie.indexOf("pgerfresh");
                 let pageRefreshValue = document.cookie[l + 10] - '0';
                 if (pageRefreshValue == 0) {
@@ -42,6 +45,7 @@ if (strlen($_SESSION['id'] == 0)) {
                     location.reload();
                 }
                 let arraysize = document.cookie.charAt(document.cookie.indexOf("arraySize") + 10);
+                console.log('Array Size : ' + arraysize)
                 if (currentIndexValue >= arraysize) {
                     window.location.replace("thankyou.php");
                 }
@@ -75,7 +79,9 @@ if (strlen($_SESSION['id'] == 0)) {
         $subjectCodeArray = array();
         while ($result = mysqli_fetch_assoc($sql)) {
             $subjectArray[] = $result['subject'];
+            // echo '<script>console.log("Subject Name : ' . $result['subject'] . '")</script>';
             $subjectCodeArray[] = $result['subjectcode'];
+            // echo '<script>console.log("Subject Code : ' . $result['subjectcode'] . '")</script>';
         }
         setcookie('subjectArrayCookie', json_encode($subjectArray), time() + 2147483647);
         setcookie('subjectCodeArrayCookie', json_encode($subjectCodeArray), time() + 2147483647);
@@ -84,7 +90,6 @@ if (strlen($_SESSION['id'] == 0)) {
         setcookie($indexCookie, $indexValue, time() + 2147483647);
         $arraySizeCookie = "arraySize";
         $arraySizeValue = sizeof($subjectArray);
-        // print($indexValue);
         setcookie($arraySizeCookie,  $arraySizeValue, time() + 2147483647);
         // setcookie('tempIndex', 0 , time() + 3600 );
     }
@@ -115,6 +120,7 @@ if (strlen($_SESSION['id'] == 0)) {
                         // if(isset($sub))
 
                         $data = json_decode($_COOKIE['subjectArrayCookie'], true);
+                        // echo "<script>console.log('Subject Name : $data[0]')</script>";
                         $dataCode = json_decode($_COOKIE['subjectCodeArrayCookie'], true);
                         $index = $_COOKIE['index'];
 
@@ -350,26 +356,10 @@ if (strlen($_SESSION['id'] == 0)) {
                                 </table>
                             </div>
 
-                            <div class="p-4 flex-fill bd-highlight">
+                            <!-- <div class="p-4 flex-fill bd-highlight">
                                 <span>
                                     <h2>Subject Feedback <sup>*</sup></h2>
                                 </span>
-                                <!-- <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm" style="border: 1px solid black;">
-                                            4 - Excellent
-                                        </div>
-                                        <div class="col-sm" style="border: 1px solid black;">
-                                            3 - Good
-                                        </div>
-                                        <div class="col-sm" style="border: 1px solid black;">
-                                            2 - Average
-                                        </div>
-                                        <div class="col-sm" style="border: 1px solid black;">
-                                            1 - Poor
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <table class="table table-bordered">
                                     <tr class="bg-light">
                                         <th></th>
@@ -543,7 +533,7 @@ if (strlen($_SESSION['id'] == 0)) {
                                         </td>
                                     </tr>
                                 </table>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="container text-center p-2"><button type="submit" name='insert' onclick="incrementCookie()" class="btn btn-outline-secondary">Next</button></div>
@@ -555,8 +545,6 @@ if (strlen($_SESSION['id'] == 0)) {
                     // function php_func()
                     // {
                     if (isset($_POST['insert'])) {
-
-
                         $co1 = $_POST['co1'];
                         $co2 = $_POST['co2'];
                         $co3 = $_POST['co3'];
@@ -567,17 +555,14 @@ if (strlen($_SESSION['id'] == 0)) {
                         else
                             $co6 = 0;
                         // echo "aayush";
-                        $sb1 = $_POST['sb1'];
-                        $sb2 = $_POST['sb2'];
-                        $sb3 = $_POST['sb3'];
-                        $sb4 = $_POST['sb4'];
-                        $sb5 = $_POST['sb5'];
                         // $responeid=$_SESSION['id'];
                         $id1 = $_SESSION['id'];
                         $sub = $_POST['subject'];
                         $subCode = $_POST['subjectcode'];
                         $sub2 = $data[$index - 1];
                         $subCode2 = $dataCode[$index - 1];
+
+                        // echo "<script>console.log('Subject Name : $sub2')</script>";
                         $uname = mysqli_query($con, "select email from users where id = $id1");
                         $result1 = mysqli_fetch_assoc($uname);
                         $usersemail = $result1['email'];
@@ -593,7 +578,7 @@ if (strlen($_SESSION['id'] == 0)) {
                             // Log faculty email to the console
                             echo "<script>console.log('Faculty Email:', '$facultyemail');</script>";
 
-                            $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6, sb1, sb2, sb3, sb4, sb5) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6', '$sb1', '$sb2', '$sb3', '$sb4', '$sb5')";
+                            $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6')";
                             mysqli_query($con, $sql);
                         }
                         // $sql = "INSERT INTO respone (subjectcode,subject,usersemail,facultyemail, co1, co2, co3, co4, co5, co6, sb1, sb2, sb3, sb4, sb5) VALUES ('$subCode2','$sub2', '$usersemail', '$facultyemail','$co1', '$co2', '$co3', '$co4', '$co5', '$co6', '$sb1', '$sb2', '$sb3', '$sb4', '$sb5')";
@@ -604,7 +589,6 @@ if (strlen($_SESSION['id'] == 0)) {
                             $sql3 = "UPDATE users SET feedback=1 WHERE email='$usersemail'";
                             mysqli_query($con, $sql3);
                             $sql = "SELECT faculty.fname, faculty.lname, faculty.email, subjectalloted.year, subjectalloted.semester, subjectalloted.suballoted, subjects.subject, 
-            ROUND((AVG(respone.sb1) + AVG(respone.sb2) + AVG(respone.sb3) + AVG(respone.sb4) + AVG(respone.sb5)) / 5, 2) AS sectionwise,
             ROUND(AVG(respone.co1), 2) AS co1,
             ROUND(AVG(respone.co2), 2) AS co2,
             ROUND(AVG(respone.co3), 2) AS co3,
@@ -628,7 +612,6 @@ if (strlen($_SESSION['id'] == 0)) {
                                 semester,
                                 suballoted,
                                 subject,
-                                sectionwise,
                                 co1,
                                 co2,
                                 co3,
@@ -641,7 +624,6 @@ if (strlen($_SESSION['id'] == 0)) {
                                 '{$row['semester']}',
                                 '{$row['suballoted']}',
                                 '{$row['subject']}',
-                                '{$row['sectionwise']}',
                                 '{$row['co1']}',
                                 '{$row['co2']}',
                                 '{$row['co3']}',
@@ -649,7 +631,6 @@ if (strlen($_SESSION['id'] == 0)) {
                                 '{$row['co5']}',
                                 '{$row['co6']}'
                             ) ON DUPLICATE KEY UPDATE
-                                sectionwise = VALUES(sectionwise),
                                 co1 = VALUES(co1),
                                 co2 = VALUES(co2),
                                 co3 = VALUES(co3),
@@ -688,7 +669,7 @@ if (strlen($_SESSION['id'] == 0)) {
                             console.log("well that 's it")
                             const norad = await radiocheck()
                             console.log('okay' + norad)
-                            if (norad == 10) {
+                            if (norad == 5) {
                                 console.log("next time")
                                 var i = document.cookie.indexOf('index');
                                 let currentIndexValue = document.cookie[i + 6] - '0';
@@ -713,11 +694,6 @@ if (strlen($_SESSION['id'] == 0)) {
                     "opt_co4_3", "opt_co4_2", "opt_co4_1",
                     "opt_co5_3", "opt_co5_2", "opt_co5_1",
                     "opt_co6_3", "opt_co6_2", "opt_co6_1",
-                    "opt_sb1_4", "opt_sb1_3", "opt_sb1_2", "opt_sb1_1",
-                    "opt_sb2_4", "opt_sb2_3", "opt_sb2_2", "opt_sb2_1",
-                    "opt_sb3_4", "opt_sb3_3", "opt_sb3_2", "opt_sb3_1",
-                    "opt_sb4_4", "opt_sb4_3", "opt_sb4_2", "opt_sb4_1",
-                    "opt_sb5_4", "opt_sb5_3", "opt_sb5_2", "opt_sb5_1"
                 ];
 
                 ids.forEach(function(id) {
@@ -737,10 +713,10 @@ if (strlen($_SESSION['id'] == 0)) {
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
         </script>
-        <script src="../js/scripts.js"></script>
+        <script src="./js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="../js/datatables-simple-demo.js"></script>
+        <script src="./js/datatables-simple-demo.js"></script>
     </body>
 
     </html>

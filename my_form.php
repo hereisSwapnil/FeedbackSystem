@@ -13,6 +13,8 @@ include_once('includes/config.php');
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="./assets/img/jsslogoicon.png" type="image/x-icon">
+
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,7 +27,7 @@ include_once('includes/config.php');
 
 <body>
   <div class="container">
-    <form  method="post">
+    <form method="post">
       <div class="my-3 p-3 bg-white rounded shadow-sm">
         <?php $sql = "select * from courseoutcomes where subject = 'maths'";
         $result = mysqli_query($con, $sql);
@@ -55,7 +57,7 @@ include_once('includes/config.php');
             </td>
             <td>
               <div class="form-check my-2  pl-5 form-check-inline">
-                <input class="form-check-input" type="radio" name="co1" id="inlineRadio1" value="1"  />
+                <input class="form-check-input" type="radio" name="co1" id="inlineRadio1" value="1" />
                 <label class="form-check-label" for="inlineRadio1">1</label>
               </div>
               <div class="form-check  my-2 pl-5 form-check-inline">
@@ -291,7 +293,7 @@ include_once('includes/config.php');
         </table>
 
       </div>
-      <button type="submit" name='insert'  class="btn btn-outline-secondary">Next</button>
+      <button type="submit" name='insert' class="btn btn-outline-secondary">Next</button>
     </form>
   </div>
   <?php

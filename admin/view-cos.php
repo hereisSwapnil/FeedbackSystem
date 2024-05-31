@@ -26,12 +26,14 @@ $result = mysqli_query($con, $sql);
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <link rel="shortcut icon" href="../assets/img/jsslogoicon.png" type="image/x-icon">
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Course Outcomes | JSSATEN-SIM</title>
+    <title>Course Outcomes | JSSATEN-FMS</title>
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />

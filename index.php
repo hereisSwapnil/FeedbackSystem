@@ -28,7 +28,7 @@
 
     <?php include_once('includes/header.php'); ?>
 
-    <div id="layoutSidenav" style="height:80%" >
+    <div id="layoutSidenav">
 
         <div id="layoutSidenav_content">
             <main>

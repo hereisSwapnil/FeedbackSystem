@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
 function getDefaultGateway()
 {
     $result = shell_exec('ipconfig');
-    if (preg_match('/Default Gateway . . . . . . . . . : ([\d\.]+)/', $result, $matches)) {
+    if (preg_match('/IPv4 Address.*: ([\d\.]+)/', $result, $matches)) {
         return $matches[1];
     }
     return null;

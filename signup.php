@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     $addno = $_POST['addno'];
     $password = $_POST['password'];
     $contact = $_POST['contact'];
-    $status = 0;
+    $status = 1;
     $activationcode = md5($email . time());
 
     $sql = mysqli_query($con, "SELECT id FROM users WHERE email='$email'");

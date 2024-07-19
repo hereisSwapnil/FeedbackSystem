@@ -74,14 +74,18 @@ if (strlen($_SESSION['id'] == 0)) {
         global $fsection;
         $fsection = $words[0];
 
+        echo "<script>console.log('Section : $fsection')</script>";
+        echo "<script>console.log('ID : $id1')</script>";
+
+
         $sql = mysqli_query($con, "select subject, subjectcode from subjects where semester= (select semester from users where id = $id1) and section_= '$fsection'");
         $subjectArray = array();
         $subjectCodeArray = array();
         while ($result = mysqli_fetch_assoc($sql)) {
             $subjectArray[] = $result['subject'];
-            // echo '<script>console.log("Subject Name : ' . $result['subject'] . '")</script>';
+            echo '<script>console.log("Subject Name : ' . $result['subject'] . '")</script>';
             $subjectCodeArray[] = $result['subjectcode'];
-            // echo '<script>console.log("Subject Code : ' . $result['subjectcode'] . '")</script>';
+            echo '<script>console.log("Subject Code : ' . $result['subjectcode'] . '")</script>';
         }
         setcookie('subjectArrayCookie', json_encode($subjectArray), time() + 2147483647);
         setcookie('subjectCodeArrayCookie', json_encode($subjectCodeArray), time() + 2147483647);

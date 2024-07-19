@@ -45,6 +45,7 @@ if (strlen($_SESSION['id'] == 0)) {
                     location.reload();
                 }
                 let arraysize = document.cookie.charAt(document.cookie.indexOf("arraySize") + 10);
+
                 console.log('Array Size : ' + arraysize)
                 if (currentIndexValue >= arraysize) {
                     window.location.replace("thankyou.php");
@@ -57,56 +58,71 @@ if (strlen($_SESSION['id'] == 0)) {
         </script>
     </head>
     <?php
+    // Start the session
+    session_start();
+
+    // Check if the 'lg' cookie is not set
     if (!isset($_COOKIE["lg"])) {
+        // Set the 'lg' and 'pgerfresh' cookies
         setcookie("lg", "ro");
         setcookie("pgerfresh", 0);
 
-        global $subjectArray;
+        // Initialize global variables
+        global $subjectArray, $fsection;
+
+        // Get the user's ID from the session
         $id1 = $_SESSION['id'];
 
-
-        $sql4 = "select section from users where id= '$id1'";
+        // Retrieve the section from the database
+        $sql4 = "SELECT section FROM users WHERE id= '$id1'";
         $result4 = mysqli_query($con, $sql4);
-        $row4 = mysqli_fetch_assoc($result4);
-        $section = $row4['section'];
-        $delimiter = ' ';
-        $words = explode($delimiter, $section);
-        global $fsection;
-        $fsection = $words[0];
+        if ($result4 && $row4 = mysqli_fetch_assoc($result4)) {
+            $section = $row4['section'];
+            $delimiter = ' ';
+            $words = explode($delimiter, $section);
+            $fsection = $words[0];
 
-        echo "<script>console.log('Section : $fsection')</script>";
-        echo "<script>console.log('ID : $id1')</script>";
+            // Debugging statements
+            echo "<script>console.log('Section: $fsection')</script>";
+            echo "<script>console.log('ID: $id1')</script>";
+        } else {
+            echo "<script>console.error('Failed to retrieve section')</script>";
+        }
 
-
-        $sql = mysqli_query($con, "select subject, subjectcode from subjects where semester= (select semester from users where id = $id1) and section_= '$fsection'");
+        // Retrieve the subjects and their codes from the database
+        $sql = "SELECT subject, subjectcode FROM subjects WHERE semester= (SELECT semester FROM users WHERE id = $id1) AND section_= '$fsection'";
+        $result = mysqli_query($con, $sql);
         $subjectArray = array();
         $subjectCodeArray = array();
-        while ($result = mysqli_fetch_assoc($sql)) {
-            $subjectArray[] = $result['subject'];
-            echo '<script>console.log("Subject Name : ' . $result['subject'] . '")</script>';
-            $subjectCodeArray[] = $result['subjectcode'];
-            echo '<script>console.log("Subject Code : ' . $result['subjectcode'] . '")</script>';
+        echo "<script>console.log('Subject Name: {$row['subject']}')</script>";
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $subjectArray[] = $row['subject'];
+                echo "<script>console.log('Subject Array: $subjectArray</script>";
+                $subjectCodeArray[] = $row['subjectcode'];
+                echo "<script>console.log('Subject Code: {$row['subjectcode']}')</script>";
+            }
+        } else {
+            echo "<script>console.error('Failed to retrieve subjects')</script>";
         }
+
+        // Set cookies for the subjects and their codes
         setcookie('subjectArrayCookie', json_encode($subjectArray), time() + 2147483647);
         setcookie('subjectCodeArrayCookie', json_encode($subjectCodeArray), time() + 2147483647);
-        $indexCookie = "index";
-        $indexValue = 0;
-        setcookie($indexCookie, $indexValue, time() + 2147483647);
-        $arraySizeCookie = "arraySize";
-        $arraySizeValue = sizeof($subjectArray);
-        setcookie($arraySizeCookie,  $arraySizeValue, time() + 2147483647);
-        // setcookie('tempIndex', 0 , time() + 3600 );
+
+        // Set cookies for the index and array size
+        setcookie("index", 0, time() + 2147483647);
+        setcookie("arraySize", sizeof($subjectArray), time() + 2147483647);
+
+        // Debugging statements for array size
+        echo "<script>console.log('Array Size: " . sizeof($subjectArray) . "')</script>";
     }
-    // if($_COOKIE['index'] == $_COOKIE['arraySize'])
-    // {
-    //     // 301 Moved Permanently
-    //     // header("Location: http://google.com/", true, 301);
-    //     // exit();
 
-    // }
-
-
+    // Debugging statements for cookie values
+    echo "<script>console.log('Index Cookie: {$_COOKIE['index']}')</script>";
+    echo "<script>console.log('Array Size Cookie: {$_COOKIE['arraySize']}')</script>";
     ?>
+
 
     <body class="sb-nav-fixed">
         <?php include_once('includes/navbar.php'); ?>
@@ -114,10 +130,6 @@ if (strlen($_SESSION['id'] == 0)) {
             <?php include_once('includes/sidebar.php'); ?>
             <div id="layoutSidenav_content">
                 <main>
-
-
-
-
                     <div class="m-5 mt-2 mb-0">
                         <?php
                         // extract($_POST);
@@ -127,7 +139,8 @@ if (strlen($_SESSION['id'] == 0)) {
                         // echo "<script>console.log('Subject Name : $data[0]')</script>";
                         $dataCode = json_decode($_COOKIE['subjectCodeArrayCookie'], true);
                         $index = $_COOKIE['index'];
-
+                        $d = json_encode($dataCode);
+                        echo "<script>console.log('Data : $d')</script>";
                         global $sub;
                         global $subCode;
                         $sub = $data[$index];
@@ -650,7 +663,7 @@ if (strlen($_SESSION['id'] == 0)) {
                     //   echo "done finally";
                     // echo "<script>
                     // incrementCookie();
-                    // </scri>";
+                    // </script>";
                     // }
                     // solution 
                     ?>

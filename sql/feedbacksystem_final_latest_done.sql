@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 19, 2024 at 05:40 AM
+-- Generation Time: Jul 19, 2024 at 07:50 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -2093,12 +2093,22 @@ INSERT INTO `respone` (`id`, `usersemail`, `facultyemail`, `subjectcode`, `subje
 (3239, '21IT112@jssaten.ac.in', 'abhishek.chaudhary@jssaten.ac.in', 'KIT-651 IT', 'Data Analytics Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (3240, '21IT112@jssaten.ac.in', 'navinjha@jssaten.ac.in', 'KNC-601 IT', 'Constitution of India, Law and Engineering', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (3241, '21IT112@jssaten.ac.in', 'meenaarora@jssaten.ac.in', 'KOE-068 IT', 'Open Elective - Software Project Management', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(3242, 'swapnilskumar99@gmail.com', 'nishisharma@jssaten.ac.in', 'BAS-401 CSDS', 'Technical Communication', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(3243, 'swapnilskumar99@gmail.com', 'nishisharma@jssaten.ac.in', 'BAS-401 CSDS', 'Technical Communication', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(3244, 'yashshuklaxiia2003@gmail.com', 'nikunj.agarwal@jssaten.ac.in', 'BAS-403 IT', 'Math IV', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(3245, 'swapnilskumar99@gmail.com', 'nishisharma@jssaten.ac.in', 'BAS-401 CSDS', 'Technical Communication', 3, 3, 3, 3, 3, 0, NULL, 4, 4, 4, 4, 4),
-(3246, 'swapnilskumar99@gmail.com', 'nishisharma@jssaten.ac.in', 'BAS-401 CSDS', 'Technical Communication', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(3247, 'swapnilskumar99@gmail.com', 'nishisharma@jssaten.ac.in', 'BAS-401 CSDS', 'Technical Communication', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL);
+(3276, 'yashshuklaxiia2003@gmail.com', 'nikunj.agarwal@jssaten.ac.in', 'BAS-403 IT', 'Math IV', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3277, 'yashshuklaxiia2003@gmail.com', 'rohini.sharma@jssaten.ac.in', 'BCC-402 IT', 'Python Programming', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3278, 'yashshuklaxiia2003@gmail.com', 'manojkumar@jssaten.ac.in', 'BCS-401 IT', 'Operating System', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3279, 'yashshuklaxiia2003@gmail.com', 'anuradha.singh@jssaten.ac.in', 'BCS-402 IT', 'Theory of Automata and Formal Languages', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3280, 'yashshuklaxiia2003@gmail.com', 'sachin.bansal@jssaten.ac.in', 'BCS-403 IT', 'Object Oriented Programming with Java', 2, 2, 2, 2, 2, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3281, 'yashshuklaxiia2003@gmail.com', 'charu.awasthi@jssaten.ac.in', 'BCS-451 IT', 'Operating System Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3282, 'yashshuklaxiia2003@gmail.com', 'meenaarora@jssaten.ac.in', 'BCS-451 IT', 'Operating System Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3283, 'yashshuklaxiia2003@gmail.com', 'manojkumar@jssaten.ac.in', 'BCS-451 IT', 'Operating System Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3284, 'yashshuklaxiia2003@gmail.com', 'prachichhabra@jssaten.ac.in', 'BCS-451 IT', 'Operating System Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3285, 'yashshuklaxiia2003@gmail.com', 'sachin.bansal@jssaten.ac.in', 'BCS-452 IT', 'Object Oriented Programming with Java Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3286, 'yashshuklaxiia2003@gmail.com', 'ujwalathakur@jssaten.ac.in', 'BCS-452 IT', 'Object Oriented Programming with Java Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3287, 'yashshuklaxiia2003@gmail.com', 'dhirajpandey@jssaten.ac.in', 'BCS-452 IT', 'Object Oriented Programming with Java Lab', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3288, 'yashshuklaxiia2003@gmail.com', 'rohini.sharma@jssaten.ac.in', 'BCS-453 IT', 'Cyber Security Workshop', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3289, 'yashshuklaxiia2003@gmail.com', 'abhishek.chaudhary@jssaten.ac.in', 'BCS-453 IT', 'Cyber Security Workshop', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3290, 'yashshuklaxiia2003@gmail.com', 'jasneet.kaur@jssaten.ac.in', 'BCS-453 IT', 'Cyber Security Workshop', 3, 3, 3, 3, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(3291, 'yashshuklaxiia2003@gmail.com', 'navinjha@jssaten.ac.in', 'BVE-401 IT', 'Universal Human Value and Professional Ethics', 1, 1, 1, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2296,7 +2306,7 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (182, 'dhirajpandey@jssaten.ac.in', 3, 6, 'IT 2', 'KCS-651 IT'),
 (183, 'birendraverma@jssaten.ac.in', 3, 6, 'IT 2', 'KIT-062 IT'),
 (184, 'meghajain@jssaten.ac.in', 3, 6, 'IT 1', 'KIT-062 IT'),
-(185, 'sukhendrasingh@jssaten.ac.in', 2, 4, 'IT 1', 'BAS-403 IT'),
+(185, 'vineeta@jssaten.ac.in', 2, 4, 'IT 1', 'BAS-403 IT'),
 (186, 'rajeshbajaj@jssaten.ac.in', 2, 4, 'IT 1', 'BVE-401 IT'),
 (187, 'sukhendrasingh@jssaten.ac.in', 2, 4, 'IT 1', 'BCS-401 IT'),
 (188, 'dhirajpandey@jssaten.ac.in', 2, 4, 'IT 1', 'BCS-402 IT'),
@@ -2312,7 +2322,6 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (198, 'puneeta.singh@jssaten.ac.in', 2, 4, 'IT 1', 'BCS-453 IT'),
 (199, 'jasneet.kaur@jssaten.ac.in', 2, 4, 'IT 1', 'BCS-453 IT'),
 (200, 'abhishek.chaudhary@jssaten.ac.in', 2, 4, 'IT 1', 'BCS-453 IT'),
-(201, 'aparnashrivastava@jssaten.ac.in', 2, 4, 'IT 1', 'BVA-451 IT'),
 (202, 'ranupandey@jssaten.ac.in', 2, 4, 'IT 2', 'BAS-403 IT'),
 (203, 'rajeshbajaj@jssaten.ac.in', 2, 4, 'IT 2', 'BVE-401 IT'),
 (204, 'aparnashrivastava@jssaten.ac.in', 2, 4, 'IT 2', 'BCS-401 IT'),
@@ -2328,7 +2337,6 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (214, 'rohini.sharma@jssaten.ac.in', 2, 4, 'IT 2', 'BCS-453 IT'),
 (215, 'suchi.smita@jssaten.ac.in', 2, 4, 'IT 2', 'BCS-453 IT'),
 (216, 'mayank.raj@jssaten.ac.in', 2, 4, 'IT 2', 'BCS-453 IT'),
-(217, 'jasneet.kaur@jssaten.ac.in', 2, 4, 'IT 2', 'BVA-451 IT'),
 (218, 'nikunj.agarwal@jssaten.ac.in', 2, 4, 'IT 3', 'BAS-403 IT'),
 (219, 'navinjha@jssaten.ac.in', 2, 4, 'IT 3', 'BVE-401 IT'),
 (220, 'manojkumar@jssaten.ac.in', 2, 4, 'IT 3', 'BCS-401 IT'),
@@ -2345,7 +2353,6 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (231, 'rohini.sharma@jssaten.ac.in', 2, 4, 'IT 3', 'BCS-453 IT'),
 (232, 'abhishek.chaudhary@jssaten.ac.in', 2, 4, 'IT 3', 'BCS-453 IT'),
 (233, 'jasneet.kaur@jssaten.ac.in', 2, 4, 'IT 3', 'BCS-453 IT'),
-(234, 'rohini.sharma@jssaten.ac.in', 2, 4, 'IT 3', 'BVA-451 IT'),
 (235, 'vipulsaxena@jssaten.ac.in', 2, 4, 'CSDS 1', 'BOE-404 CSDS'),
 (236, 'nishisharma@jssaten.ac.in', 2, 4, 'CSDS 1', 'BAS-401 CSDS'),
 (237, 'puneeta.singh@jssaten.ac.in', 2, 4, 'CSDS 1', 'BCS-401 CSDS'),
@@ -2362,7 +2369,6 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (248, 'rohini.sharma@jssaten.ac.in', 2, 4, 'CSDS 1', 'BCS-453 CSDS'),
 (249, 'suchi.smita@jssaten.ac.in', 2, 4, 'CSDS 1', 'BCS-453 CSDS'),
 (250, 'jasneet.kaur@jssaten.ac.in', 2, 4, 'CSDS 1', 'BCS-453 CSDS'),
-(251, 'mayank.raj@jssaten.ac.in', 2, 4, 'CSDS 1', 'BVA-451 CSDS'),
 (252, 'singla.1982@jssaten.ac.in', 2, 4, 'CSDS 2', 'BOE-404 CSDS'),
 (253, 'nishisharma@jssaten.ac.in', 2, 4, 'CSDS 2', 'BAS-401 CSDS'),
 (254, 'manojkumar@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-401 CSDS'),
@@ -2375,8 +2381,7 @@ INSERT INTO `subjectalloted` (`sno`, `facultyemail`, `year`, `semester`, `sectio
 (261, 'shivani.pathak@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-452 CSDS'),
 (262, 'suchi.smita@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-452 CSDS'),
 (263, 'rohini.sharma@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-453 CSDS'),
-(264, 'abhishek.chaudhary@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-453 CSDS'),
-(265, 'geeta.singh@jssaten.ac.in', 2, 4, 'CSDS 2', 'BVA-451 CSDS');
+(264, 'abhishek.chaudhary@jssaten.ac.in', 2, 4, 'CSDS 2', 'BCS-453 CSDS');
 
 -- --------------------------------------------------------
 
@@ -2470,7 +2475,6 @@ INSERT INTO `subjects` (`id`, `year`, `semester`, `section_`, `subjectcode`, `su
 (72, 2, 4, 'CSDS', 'BCS-451 CSDS', 'Operating System Lab'),
 (73, 2, 4, 'CSDS', 'BCS-452 CSDS', 'Object Oriented Programming with Java Lab'),
 (74, 2, 4, 'CSDS', 'BCS-453 CSDS', 'Cyber Security Workshop'),
-(75, 2, 4, 'CSDS', 'BVA-451 CSDS', 'Sports and Yoga - II'),
 (76, 2, 4, 'IT', 'BAS-403 IT', 'Math IV'),
 (77, 2, 4, 'IT', 'BVE-401 IT', 'Universal Human Value and Professional Ethics'),
 (78, 2, 4, 'IT', 'BCS-401 IT', 'Operating System'),
@@ -2479,8 +2483,7 @@ INSERT INTO `subjects` (`id`, `year`, `semester`, `section_`, `subjectcode`, `su
 (81, 2, 4, 'IT', 'BCC-402 IT', 'Python Programming'),
 (82, 2, 4, 'IT', 'BCS-451 IT', 'Operating System Lab'),
 (83, 2, 4, 'IT', 'BCS-452 IT', 'Object Oriented Programming with Java Lab'),
-(84, 2, 4, 'IT', 'BCS-453 IT', 'Cyber Security Workshop'),
-(85, 2, 4, 'IT', 'BVA-451 IT', 'Sports and Yoga - II');
+(84, 2, 4, 'IT', 'BCS-453 IT', 'Cyber Security Workshop');
 
 -- --------------------------------------------------------
 
@@ -2727,9 +2730,7 @@ INSERT INTO `users` (`id`, `year`, `semester`, `department`, `section`, `fname`,
 (508, 3, 6, 'Information Technology', 'IT 2', 'Pratik ', 'dey', '2003pratikdey@gmail.com', '2100910130081', '21IT074', 'Qwe123!', '6290850579', NULL, '2024-06-05 06:27:18', 1, '49463908d91d02df85e7d8718939ab76', 1),
 (509, 3, 6, 'Information Technology', 'IT 1', 'Siddharth', 'jain', 'siddharthjain040@gmail.com', '2100910130106', '21it133', 'jAIN@123', '9871907249', NULL, '2024-06-05 06:28:04', 1, '641713ba3d17ed0b6d23b918f271612f', 1),
 (510, 3, 6, 'Information Technology', 'IT 2', 'Shivangi', 'Siddhu', '21IT112@jssaten.ac.in', '2100910130101', '21IT112', '12345', '9520319138', NULL, '2024-06-05 06:33:16', 1, '259bdfed696ca3d0a192c32dac770b25', 1),
-(511, 2, 4, 'Information Technology', 'IT 3', 'Yash', 'Shukla', 'yashshuklaxiia2003@gmail.com', '2200910130199', '22IT085', 'Test@1', '9555144734', NULL, '2024-07-18 21:09:09', 0, '846aae4ccaa3cfe75e79ea1931fedce9', 1),
-(512, 2, 4, 'Information Technology', 'IT 3', 'Yash', 'Shukla', 'yashshukla2820032003@gmail.com', '2200910130198', '22IT101', 'Test@1', '1234567891', NULL, '2024-07-18 21:11:11', 0, '9672961ba10a618e82415bd962cd116f', 1),
-(513, 2, 4, 'Information Technology', 'CSDS 2', 'Swapnil', 'Singh', 'swapnilskumar99@gmail.com', '2200911540113', '22csds049', 'Hello@1', '9454151115', NULL, '2024-07-18 21:12:51', 0, '8806ba21242ef71c155ff98af43de8b7', 1);
+(514, 2, 4, 'Information Technology', 'IT 3', 'Yash', 'Shukla', 'yashshuklaxiia2003@gmail.com', '2200910130199', '22IT085', 'Hello@1', '9555144734', NULL, '2024-07-19 17:47:54', 1, '38a61f179d4fe16c6ca330ecbc2ceab3', 1);
 
 --
 -- Indexes for dumped tables
@@ -2838,7 +2839,7 @@ ALTER TABLE `faculty`
 -- AUTO_INCREMENT for table `respone`
 --
 ALTER TABLE `respone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3248;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3292;
 
 --
 -- AUTO_INCREMENT for table `subjectalloted`
@@ -2856,7 +2857,7 @@ ALTER TABLE `subjects`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=514;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=515;
 
 --
 -- Constraints for dumped tables
